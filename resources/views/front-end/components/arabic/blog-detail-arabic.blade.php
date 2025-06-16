@@ -34,7 +34,7 @@
                             </li>
                             <li>
                                 <i class="las la-user-tie"></i>
-                                <a href="javascript:void(0)">{{ Auth::user()->name }}</a>
+                                <a href="javascript:void(0)">{{ optional($blogs->user)->name }}</a>
                             </li>
                         </ul>
                         <div style="text-align: justify; line-height: 2;">
@@ -61,29 +61,29 @@
                                 </div>
                                 <div class="recent-post-content">
                                     <ul>
-                                        <li><a href="#">{{ Auth()->user()->name }}</a></li>
+                                        <li><a href="#">{{ optional($recent->user)->name }}</a></li>
                                         <li><a href="#"><i class="fa fa-calendar"></i>{{ $recent->created_at->format('h:i A') }}</a></li>
                                     </ul>
-                                    <h3><a href="blog-details.html">{{ $recent->name }}</a></h3>
+                                    <h3><a href="blog-details.html">{{ $recent->arabic_title }}</a></h3>
                                 </div>
                             </div>
                         @endforeach                        
                     </div>
                     
                     <div class="side-bar-box categories-box">
-                        <h3 class="title">Categories</h3>
+                        <h3 class="title">فئات</h3>
                         <ul>
                             @foreach ($services as $service)
-                            <li><a href="blog-details.html"><i class="las la-angle-double-right"></i></i> {{$service->name}} </a></li>
+                            <li><a href="blog-details.html"><i class="las la-angle-double-right"></i></i> {{$service->title_arabic}} </a></li>
                             @endforeach
                         </ul>
                     </div>
                     
                     <div class="side-bar-box tags-box">
-                        <h3 class="title">Tags</h3>
+                        <h3 class="title">العلامات</h3>
                         <ul>
                             @foreach ($tags as $tag)
-                            <li><a href="blog-details.html">{{$tag->tag}}</a></li>
+                            <li><a href="blog-details.html">{{$tag->arabic_tag}}</a></li>
                             @endforeach
                         </ul>
                     </div>

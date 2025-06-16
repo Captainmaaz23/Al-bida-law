@@ -75,12 +75,17 @@ class IndexController extends Controller
     }
 
     public function Single_Arabic_Blog($id){
-        $blogs = Blogs::find($id);
-        $recent_blogs = Blogs::orderBy('created_at','desc')->take(3)->get();
-        $tags = Blogs::select('tag')->get();
-        $services = Services::select('name')->get();
+        $blogs = Blogs::with('user')->find($id);
+        $recent_blogs = Blogs::with('user')->orderBy('created_at','desc')->take(3)->get();
+        $tags = Blogs::select('arabic_tag')->get();
+        $services = Services::select('title_arabic')->get();
         $logo = Logo::first();
         return view('front-end.Arabic-Components.arabic-blog-detail',compact('blogs','recent_blogs','tags','services','logo'));
     }
 
+    public function AllArabicBlogs(){
+        $logo = Logo::first();
+        $blogs = Blogs::orderBy('created_at', 'desc')->paginate(3); // 6 items per page
+        return view('front-end.Arabic-Components.arabic_articles',compact('logo','blogs'));
+    }
 }

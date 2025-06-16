@@ -84,7 +84,7 @@
                     <div class="collapse navbar-collapse mean-menu">
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item">
-                                <a href="javascript:void(0)" class="nav-link active">
+                                <a href="{{ route('front.arabicPage') }}" class="nav-link active">
                                     بيت 
                                 </a>
                                 
@@ -162,8 +162,7 @@
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item">
-                                        <a href="{{ route('front.allblogs') }}" class="nav-link">مقالات</a>
-                                    </li>
+                                        <a href="{{ route('front.allarabicblogs') }}" class="nav-link">مقالات</a>                                    </li>
 
                                     <li class="nav-item">
                                         <a href="javascript:void(0)" class="nav-link">بودكاست</a>
