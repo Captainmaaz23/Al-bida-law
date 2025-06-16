@@ -1,6 +1,6 @@
 <div class="service-area pt-100 pb-70">
     <div class="container">    
-            <h5 style="color: #131e3d !important;" class="text-end" data="rtl">معلومات عنا</h5>
+            <h5 style="color: #131e3d !important; font-weight: bold; font-size:24px" class="text-end" data="rtl">معلومات عنا</h5>
             @if ($about)
     <h4 style="color: #131e3d !important;" data="rtl" class="text-end">
         {{ $about->arabic_title ?? '' }}
