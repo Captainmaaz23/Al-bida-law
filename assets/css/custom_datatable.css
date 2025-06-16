@@ -1,0 +1,36 @@
+
+#myDataTable{
+    width:100%;
+}
+.dataTables_wrapper > .btn-group, .dataTables_wrapper > .btn-group-vertical {
+    position: relative;
+    display: inline-flex;
+    vertical-align: middle;
+    float: right;
+}
+
+.btn-sm{
+    margin-left:35%;
+}
+
+.buttons-html5, .buttons-print, .buttons-colvis {
+    color: #fff;
+    background-color: #ff6c9d;
+    border-color: #ff6c9d;
+}
+
+.form-inline {
+    display: block;
+}
+.table-responsive > .row {
+    display: block;
+}
+.dataTables_length {
+    float: left;
+}
+.dataTables_filter {
+    float: right;
+}
+.btn-sm {
+    margin-left: 35%;
+}

@@ -1,0 +1,112 @@
+
+
+.hide {
+    display: none!important;
+}
+
+.radioBtn > .notActive,
+.radioBtnb > .notActive {
+    color: #3276b1 !important;
+    background-color: #fff !important;
+}
+
+.menyTable-container table {
+    border-spacing: 0;
+    overflow: hidden;
+}
+
+.menyTable-containertd {
+    height: 25px;
+    border: 1px solid black;
+}
+
+.ui-draggable,
+.ui-droppable {
+    background-position: top;
+}
+
+.variations{
+    border:1px solid #999;
+    margin-bottom:20px;
+}
+.mt-10 {
+    margin-top: 10px;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mt-30 {
+    margin-top: 30px;
+}
+
+.mt-40 {
+    margin-top: 40px;
+}
+
+.mt-100 {
+    margin-top: 100px;
+}
+
+.txt-just {
+    text-align: justify;
+}
+
+.text-right {
+    text-align: right;
+    padding-right: 10px;
+}
+
+.text-left {
+    text-align: left;
+    padding-left: 10px;
+}
+.dot {
+    margin-right: 5px;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    display: inline-block;
+}
+.green_dot {
+    background-color: #20ff00;
+}
+.red_dot {
+    background-color: #fc0000;
+}
+
+.menyTable-container table {
+    border-spacing: collapse;
+    overflow: hidden;
+}
+.menyTable-container td {
+    height: 25px;
+    border: 1px solid black;
+}
+.ui-draggable, .ui-droppable {
+    background-position: top;
+}
+@media (min-width: 768px) {
+    .pull-right {
+        bottom: 20px;
+        position: relative;
+        padding: 10px;
+        float: right;
+    }
+    .right_align .pull-right {
+        bottom: 0;
+        padding: 5px;
+    }
+    .breadcrumb {
+        padding: 0px !important;
+    }
+    .dataTables_paginate {
+        bottom: 40px;
+        position: relative;
+        float: right;
+    }
+    .dataTables_paginate .page-link {
+        font-weight: normal;
+    }
+}
