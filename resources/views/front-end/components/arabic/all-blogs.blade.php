@@ -4,10 +4,10 @@
         <div class="d-table-cell">
             <div class="container">
                 <div class="page-content">
-                    <h2>Blog</h2>
+                    <h2>مدونة</h2>
                     <ul>
-                        <li><a href="index-2.html">Home <i class="las la-angle-right"></i></a></li>
-                        <li>Blog</li>
+                        <li><a href="index-2.html">بيت <i class="las la-angle-right"></i></a></li>
+                        <li>مدونة</li>
                     </ul>
                 </div>
             </div>
@@ -27,7 +27,7 @@
                         <img src=" {{ url('public/uploads/blogs/'.$blog->image) }}" style="width: 100%;height:60vh" alt="Image">
                     </a>
                     <div class="blog-card-text">
-                        <h3><a href="blog-details.html">{{$blog->name}}</a></h3>
+                        <h3><a href="blog-details.html">{{ Str::limit($blog->arabic_title,30) }}</a></h3>
                         <ul>
                             <li>
                                 <i class="las la-calendar"></i>
@@ -40,9 +40,9 @@
                             </li>
                         </ul>
 
-                        <p>{!! Str::limit($blog->description,20) !!}</p>
+                        <p>{!! Str::limit($blog->arabic_description,40) !!}</p>
 
-                        <a href="{{ route('front.about',$blog->id) }}" class="read-more">
+                        <a href="{{ route('front.single_arabic_blog',$blog->id) }}" class="read-more">
                             Read More <i class="las la-angle-double-right"></i>
                         </a>
                     </div>

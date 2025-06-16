@@ -44,4 +44,9 @@ class User extends Authenticatable
     {
         return $query->where('status', 1);
     }
+
+    public function blogs(){
+        return $this->hasMany(Blogs::class,'created_by','id');
+    }
+
 }

@@ -84,7 +84,7 @@
                     <div class="collapse navbar-collapse mean-menu">
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item">
-                                <a href="javascript:void(0)" class="nav-link active">
+                                <a href="{{ route('front.home') }}" class="nav-link active">
                                     Home 
                                 </a>
                                 
