@@ -31,7 +31,7 @@
   -webkit-transition: 0.4s;
   transition: 0.4s;
   -webkit-box-shadow: 0 0px 15px #2020203d;
-          box-shadow: 0 0px 15px #2020203d;
+  box-shadow: 0 0px 15px #2020203d;
   background: white url("../img/night.png");
   background-repeat: no-repeat;
   background-position: center;
@@ -57,44 +57,55 @@
   width: 0;
   height: 0;
 }
-.pchoice{
+
+.pchoice {
 
   color: #131e3d !important;
 }
-.switch-box input:checked + .slider {
+
+.switch-box input:checked+.slider {
   background-color: transparent;
   border: 1.5px solid #0f3041;
 }
 
-.switch-box input:focus + .slider {
+.switch-box input:focus+.slider {
   -webkit-box-shadow: 0 0 1px #0f3041;
-          box-shadow: 0 0 1px #0f3041;
+  box-shadow: 0 0 1px #0f3041;
 }
 
-.switch-box input:checked + .slider:before {
+.switch-box input:checked+.slider:before {
   -webkit-transform: translateX(24px);
-          transform: translateX(24px);
+  transform: translateX(24px);
   background: white url("../img/sunny.png");
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.theme-dark h1, .theme-dark h2, .theme-dark h3, .theme-dark h4, .theme-dark h5, .theme-dark h6 {
+.theme-dark h1,
+.theme-dark h2,
+.theme-dark h3,
+.theme-dark h4,
+.theme-dark h5,
+.theme-dark h6 {
   color: #ffffff !important;
 }
-.colorblue{
+
+.colorblue {
 
   color: #131e3d !important;
 }
-.colorbrown{
+
+.colorbrown {
 
   color: #8a1538 !important;
 }
-.colorblack{
+
+.colorblack {
 
   color: #000000 !important;
 }
-.colorwhite{
+
+.colorwhite {
 
   color: #ffffff !important;
 }
@@ -128,7 +139,7 @@
 }
 
 .theme-dark p {
-  color: #ffffff !important;
+  color: #6c6c6c !important;
 }
 
 .theme-dark .content p {
@@ -312,22 +323,25 @@
   opacity: 0.7;
 }
 
-.theme-dark .low-card, .theme-dark .low-card-two {
+.theme-dark .low-card,
+.theme-dark .low-card-two {
   background-color: #0e0e0e;
 }
 
-.theme-dark .service-area, .theme-dark .our-service-area {
+.theme-dark .service-area,
+.theme-dark .our-service-area {
   background-color: #ffffff;
 }
 
-.theme-dark .service-card, .theme-dark .our-service-card {
+.theme-dark .service-card,
+.theme-dark .our-service-card {
   background-color: #0e0e0e;
 }
 
 .theme-dark .choose-card i {
   background-color: #ffffff;
   -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
 .theme-dark .signle-fun-fact {
@@ -342,30 +356,34 @@
   background-color: #252525 !important;
 }
 
-.theme-dark .testimonials-area .testimonials-slider.owl-theme .owl-nav .owl-prev, .theme-dark .testimonials-area .testimonials-slider.owl-theme .owl-nav .owl-next {
+.theme-dark .testimonials-area .testimonials-slider.owl-theme .owl-nav .owl-prev,
+.theme-dark .testimonials-area .testimonials-slider.owl-theme .owl-nav .owl-next {
   background-color: #0e0e0e !important;
   -webkit-transition: 0.7s;
   transition: 0.7s;
 }
 
-.theme-dark .testimonials-area .testimonials-slider.owl-theme .owl-nav .owl-prev:hover, .theme-dark .testimonials-area .testimonials-slider.owl-theme .owl-nav .owl-next:hover {
+.theme-dark .testimonials-area .testimonials-slider.owl-theme .owl-nav .owl-prev:hover,
+.theme-dark .testimonials-area .testimonials-slider.owl-theme .owl-nav .owl-next:hover {
   background-color: #c8242f !important;
 }
 
-.theme-dark .attorney-area, .theme-dark .blog-area {
+.theme-dark .attorney-area,
+.theme-dark .blog-area {
   background-color: #ffffff;
 }
 
-.theme-dark .attorney-card, .theme-dark .blog-card {
+.theme-dark .attorney-card,
+.theme-dark .blog-card {
   background-color: #0e0e0e;
 }
-.blogcardhome
-{
-  background-color:#131e3d !important;
+
+.blogcardhome {
+  background-color: #131e3d !important;
 }
-.attcardhome
-{
-  background-color:#8a1538 !important;
+
+.attcardhome {
+  background-color: #8a1538 !important;
 }
 
 .theme-dark .attor-details-item .attor-details-left .attor-social-details ul li a {
@@ -400,7 +418,9 @@
   color: #ffffff;
 }
 
-.theme-dark .services-details .comment-respond .comment-form-author input, .theme-dark .services-details .comment-respond .comment-form-email input, .theme-dark .services-details .comment-respond .comment-form-url input {
+.theme-dark .services-details .comment-respond .comment-form-author input,
+.theme-dark .services-details .comment-respond .comment-form-email input,
+.theme-dark .services-details .comment-respond .comment-form-url input {
   background-color: #0e0e0e;
 }
 
@@ -425,7 +445,8 @@
   color: #c8242f;
 }
 
-.theme-dark .footer-area, .theme-dark .footer-bottom {
+.theme-dark .footer-area,
+.theme-dark .footer-bottom {
   background-color: #0e0e0e;
 }
 
@@ -485,4 +506,5 @@
 .theme-dark .error-area .error .error-btn a:hover {
   color: #c8242f;
 }
+
 /*# sourceMappingURL=theme-dark.css.map */

@@ -9,14 +9,19 @@
 
         <div class="testimonials-slider owl-carousel owl-theme">
             @foreach ($client_review as $client)
-                <div class="testimonials-slider-item">
+                <div class="testimonials-slider-item" style="display: flex; align-items: flex-end; gap: 20px;"
+                    dir="rtl">
+                    <!-- Image on the right -->
                     <div class="testimonials-img">
-                        <img src="{{ url('public/uploads/client_review/' . $client->image) }}" alt="Image">
+                        <img src="{{ url('public/uploads/client_review/' . $client->image) }}" alt="Image"
+                            style="border-radius: 6px;" />
                     </div>
-                    <div class="img-text">
+
+                    <!-- Text on the left -->
+                    <div class="img-text-ar ">
                         <h3 class="text-end">{{ $client->heading_arabic }}</h3>
                         <p class="text-end">{{ $client->summary_arabic }}</p>
-                        <a href="javascript:void(0)">
+                        <a href="javascript:void(0)" class="d-block text-end">
                             <i class="las la-angle-double-left"></i>
                             اقرأ المزيد
                         </a>
