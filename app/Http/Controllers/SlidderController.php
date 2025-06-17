@@ -217,6 +217,11 @@ class SlidderController extends Controller
         $slidder->summary = $request->summary;
         $slidder->name = $request->name;
         $slidder->attorny = $request->attorny;
+        $slidder->arabic_text = $request->arabic_text;
+        $slidder->arabic_attorny = $request->arabic_attorny;
+        $slidder->arabic_summary = $request->arabic_summary;
+        $slidder->arabic_name = $request->arabic_name;
+
         $slidder->created_by = Auth::id();
         if ($request->hasFile('image')) {
             $image = $request->file('image');
@@ -259,6 +264,10 @@ class SlidderController extends Controller
         $slidder->summary = $request->summary;
         $slidder->name = $request->name;
         $slidder->attorny = $request->attorny;
+        $slidder->arabic_text = $request->arabic_text;
+        $slidder->arabic_attorny = $request->arabic_attorny;
+        $slidder->arabic_summary = $request->arabic_summary;
+        $slidder->arabic_name = $request->arabic_name;
         $slidder->updated_by = Auth::id();
 
     if ($request->hasFile('image')) {
