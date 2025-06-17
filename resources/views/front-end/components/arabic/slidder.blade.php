@@ -1,28 +1,31 @@
 <!-- Hero Slider Area -->
 <div class="hero-slider owl-carousel owl-theme">
     @foreach ($slidder as $index => $slide)
-    <div class="hero-slider-item" style="background-image: url('{{ url('public/uploads/slidder/' . $slide->image) }}');">
-        <div class="d-table">
-            <div class="d-table-cell">
-                <div class="container">
-                    <div class="slider-content" style="padding-left: 30px">
-                        <span><p dir="rtl" class="text-end"> مرحباً بكم في مكتب البدع للمحاماة </p></span>
-                        <h1 dir="rtl">{!! $slide->arabic_text  !!}</h1>
-                        <p dir="rtl">{{ $slide->arabic_summary }}</p>
-                        <div class="text-sign">
-                            <h3 dir="rtl">{{ $slide->arabic_name }}</h3>
-                            <p dir="rtl">{{ $slide->arabic_attorny }}</p>
+        <div class="hero-slider-item"
+            style="background-image: url('{{ url('public/uploads/slidder/' . $slide->image) }}');">
+            <div class="d-table">
+                <div class="d-table-cell">
+                    <div class="container">
+                        <div class="slider-content" style="padding-left: 30px">
+                            <span style="font-weight: bold; font-size:24px">
+                                <p dir="rtl" class="text-end"> مرحباً بكم في مكتب البدع للمحاماة </p>
+                            </span>
+                            <h1 dir="rtl">{!! $slide->arabic_text !!}</h1>
+                            <p dir="rtl">{{ $slide->arabic_summary }}</p>
+                            <div class="text-sign">
+                                <h3 dir="rtl">{{ $slide->arabic_name }}</h3>
+                                <p dir="rtl">{{ $slide->arabic_attorny }}</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-@endforeach
+    @endforeach
 
-    </div>
+</div>
 
-    {{-- <div class="hero-slider-item item-bg2">
+{{-- <div class="hero-slider-item item-bg2">
         <div class="d-table">
             <div class="d-table-cell">
                 <div class="container">

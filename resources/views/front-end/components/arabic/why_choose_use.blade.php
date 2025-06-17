@@ -6,33 +6,34 @@
                 <div class="choose-text">
 
                     <div class="section-title">
-                        <span>Why Choose Us</span>
+                        <span style="font-weight: bold; font-size: 24px;">لماذا تختارنا؟</span>
                         {{-- <h2>Mastering Legal Excellence Across Diverse Sectors.</h2>
                         <p>At Al-Bidda Law Firm, we pride ourselves on being at the forefront of legal excellence. Our unwavering commitment is to providing unparalleled services, blending traditional values with modern practices to meet your unique legal needs.
                        </p> --}}
 
                         @foreach ($chooseUs as $choose)
-                        <h2 dir="rtl" class="text-end">{{ $choose->arabic_heading }}</h2>
-                        <p dir="rtl" class="text-end">{{ $choose->arabic_summary }}
-                        </p>
+                            <h2 dir="rtl" class="text-end">{{ $choose->arabic_heading }}</h2>
+                            <p dir="rtl" class="text-end">{{ $choose->arabic_summary }}
+                            </p>
                         @endforeach
-                        
+
 
                     </div>
-                    
+
                     @foreach ($chooseUs as $choose)
                         @foreach ($choose->details as $detail)
-                        <div class="choose-card" dir="rtl">
-                            <div class="d-flex align-items-start gap-3">
-                                <i class="item-left">
-                                    <img src="{{ url('public/uploads/why-choose/sub_image/' . $detail->sub_image) }}" alt="Image" class="pt-2" />
-                                </i>
-                                <div>
-                                    <h3 class="text-end">{{ $detail->arabicsub_heading ?? '' }}</h3>
-                                    <p class="text-end">{{ $detail->arabicsub_summary ?? '' }}</p>
+                            <div class="choose-card" dir="rtl">
+                                <div class="d-flex align-items-start gap-3">
+                                    <i class="item-left">
+                                        <img src="{{ url('public/uploads/why-choose/sub_image/' . $detail->sub_image) }}"
+                                            alt="Image" class="pt-2" />
+                                    </i>
+                                    <div>
+                                        <h3 class="text-end">{{ $detail->arabicsub_heading ?? '' }}</h3>
+                                        <p class="text-end">{{ $detail->arabicsub_summary ?? '' }}</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                         @endforeach
                     @endforeach
 
@@ -73,7 +74,7 @@
                 <div class="signle-fun-fact">
                     <i class="las la-balance-scale"></i>
                     <h3><span class="odometer" data-count="15890">00</span>+</h3>
-                    <p>القضية المقدمة</p>
+                    <p style="font-weight: bold; font-size:20px">القضية المقدمة</p>
                 </div>
             </div>
 
@@ -81,7 +82,7 @@
                 <div class="signle-fun-fact">
                     <i class="las la-gavel"></i>
                     <h3><span class="odometer" data-count="525">00</span>+</h3>
-                    <p>المستشارين</p>
+                    <p style="font-weight: bold; font-size:20px">المستشارين</p>
                 </div>
             </div>
 
@@ -89,7 +90,7 @@
                 <div class="signle-fun-fact">
                     <i class="las la-trophy"></i>
                     <h3><span class="odometer" data-count="275">00</span>+</h3>
-                    <p>إجمالي العملاء</p>
+                    <p style="font-weight: bold; font-size:20px">إجمالي العملاء</p>
                 </div>
             </div>
 
@@ -97,14 +98,14 @@
                 <div class="signle-fun-fact">
                     <i class="lab la-gitkraken"></i>
                     <h3><span class="odometer" data-count="1248">00</span></h3>
-                    <p>المشاريع</p>
+                    <p style="font-weight: bold; font-size:20px">المشاريع</p>
                 </div>
             </div>
         </div>
 
         <div class="fun-facts-shape bottom">
-            <img src=" {{asset_url('frontend/img/shape.png')}} " class="shape1" alt="Shape">
-            <img src="{{asset_url('frontend/img/shape.png')}}" class="shape2" alt="Shape">
+            <img src=" {{ asset_url('frontend/img/shape.png') }} " class="shape1" alt="Shape">
+            <img src="{{ asset_url('frontend/img/shape.png') }}" class="shape2" alt="Shape">
         </div>
     </div>
 </div>
