@@ -39,8 +39,20 @@ $menus = $menus ?? [];
         <input type="text" name="heading" class="form-control" value="{{ $chooseUs->heading }}">
     </div>
     <div class="form-group col-sm-6">
+        <label for="heading" dir="rtl" class="d-flex text-end">العنوان العربي:</label>
+        <input type="text" dir="rtl" name="arabic_heading" placeholder="العنوان العربي" class="form-control" value="{{ $chooseUs->arabic_heading }}">
+    </div>
+    
+</div>
+
+<div class="row">
+    <div class="form-group col-sm-6">
         <label for="summary">Summary:</label>
         <input type="text" name="summary" class="form-control" value="{{ $chooseUs->summary }}">
+    </div>
+    <div class="form-group col-sm-6">
+        <label for="summary" dir="rtl" class="d-flex text-end">ملخص:</label>
+        <input type="text" dir="rtl" name="arabic_summary" class="form-control" value="{{ $chooseUs->arabic_summary }}">
     </div>
 </div>
 
@@ -60,14 +72,28 @@ $menus = $menus ?? [];
         <input type="hidden" name="detail_ids[{{ $index }}]" value="{{ $detail->id }}">
 
         <div class="row">
+            <!-- English Fields -->
             <div class="form-group col-sm-5">
                 <label>Sub Heading:</label>
-                <input type="text" name="sub_heading[{{ $index }}]" class="form-control" value="{{ $detail->sub_heading }}">
+                <input type="text" name="sub_heading[{{ $index }}]" class="form-control" value="{{ $detail->sub_heading }}" placeholder="Enter sub heading">
             </div>
 
             <div class="form-group col-sm-5">
                 <label>Sub Summary:</label>
-                <input type="text" name="sub_summary[{{ $index }}]" class="form-control" value="{{ $detail->sub_summary }}">
+                <input type="text" name="sub_summary[{{ $index }}]" class="form-control" value="{{ $detail->sub_summary }}" placeholder="Enter sub summary">
+            </div>
+
+            <!-- Arabic Fields (RTL) -->
+            <div class="form-group col-sm-5">
+                <label dir="rtl" class="text-end d-flex">العنوان الفرعي:</label>
+                <input type="text" name="arabicsub_heading[{{ $index }}]" dir="rtl" class="form-control" 
+                       value="{{ $detail->arabicsub_heading ?? '' }}" placeholder="أدخل العنوان الفرعي">
+            </div>
+
+            <div class="form-group col-sm-5">
+                <label dir="rtl" class="text-end d-flex">ملخص فرعي:</label>
+                <input type="text" name="arabicsub_summary[{{ $index }}]" dir="rtl" class="form-control" 
+                       value="{{ $detail->arabicsub_summary ?? '' }}" placeholder="أدخل الملخص الفرعي">
             </div>
 
             <div class="form-group col-sm-2">
@@ -77,7 +103,7 @@ $menus = $menus ?? [];
         </div>
 
         <div class="row">
-            <div class="form-group col-sm-12">
+            <div class="form-group col-sm-6">
                 <label>Sub Image:</label>
                 <input type="file" name="sub_image[{{ $index }}]" class="form-control">
                 @if($detail->sub_image)
@@ -87,9 +113,7 @@ $menus = $menus ?? [];
         </div>
         <hr>
     </div>
-@endforeach
-
-
+    @endforeach
 </div>
 
 <div class="row">
@@ -115,29 +139,38 @@ $menus = $menus ?? [];
                 fieldCounter++;
         
                 const newFieldSet = `
-                <div class="dynamic-field-set" id="dynamic-field-set-${fieldCounter}">
-                    <div class="row">
-                        <div class="form-group col-sm-5">
-                            <label>Sub Heading:</label>
-                            <input type="text" name="sub_heading[${fieldCounter}]" class="form-control">
-                        </div>
-                        <div class="form-group col-sm-5">
-                            <label>Sub Summary:</label>
-                            <input type="text" name="sub_summary[${fieldCounter}]" class="form-control">
-                        </div>
-                        <div class="form-group col-sm-2">
-                            <label>&nbsp;</label><br>
-                            <button type="button" class="btn btn-sm btn-danger remove-field" data-field-id="dynamic-field-set-${fieldCounter}">Remove</button>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="form-group col-sm-12">
-                            <label>Sub Image:</label>
-                            <input type="file" name="sub_image[${fieldCounter}]" class="form-control">
-                        </div>
-                    </div>
-                    <hr>
-                </div>`;
+                <div class="row dynamic-field-set" id="dynamic-field-set-${fieldCounter}">
+    <!-- English Fields -->
+    <div class="form-group col-sm-5">
+        <label>Sub Heading:</label>
+        <input type="text" name="sub_heading[${fieldCounter}]" class="form-control" placeholder="Enter sub heading">
+    </div>
+    <div class="form-group col-sm-5">
+        <label>Sub Summary:</label>
+        <input type="text" name="sub_summary[${fieldCounter}]" class="form-control" placeholder="Enter sub summary">
+    </div>
+    
+    <!-- Arabic Fields (RTL) -->
+    <div class="form-group col-sm-5">
+        <label dir="rtl" class="text-end d-flex">العنوان الفرعي:</label>
+        <input type="text" name="arabicsub_heading[${fieldCounter}]" dir="rtl" class="form-control" placeholder="أدخل العنوان الفرعي">
+    </div>
+    <div class="form-group col-sm-5">
+        <label dir="rtl" class="text-end d-flex">ملخص فرعي:</label>
+        <input type="text" name="arabicsub_summary[${fieldCounter}]" dir="rtl" class="form-control" placeholder="أدخل الملخص الفرعي">
+    </div>
+
+    <div class="form-group col-sm-5">
+        <label  class="text-end d-flex">Image</label>
+        <input type="file" name="sub_image[${fieldCounter}]" class="form-control">
+    </div>
+    
+    <!-- Remove Button -->
+    <div class="form-group col-sm-2">
+        <label>&nbsp;</label><br>
+        <button type="button" class="btn btn-sm btn-danger remove-field" data-field-id="dynamic-field-set-${fieldCounter}">Remove</button>
+    </div>
+</div>`;
         
                 $('#dynamic-fields-container').append(newFieldSet);
             });

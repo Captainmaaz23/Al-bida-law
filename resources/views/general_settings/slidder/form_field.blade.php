@@ -49,13 +49,13 @@ $menus = $menus ?? [];
 
     <div class="row text-end">
         <div class="form-group col-sm-12 mt-4">
-            <label for="arabic-description">Arabic Description:</label>
+            <label for="arabic-description" dir="rtl" class="text-end d-flex">الوصف باللغة العربية:</label>
             <textarea 
     id="arabictext"
     name="arabic_text" 
     class="form-control" 
     dir="rtl"
-    placeholder="الوصف"
+    placeholder="الوصف باللغة العربية:"
 >{!! isset($slidder->arabic_text) ? $slidder->arabic_text : '' !!}</textarea>
         </div>
     </div>
@@ -66,7 +66,7 @@ $menus = $menus ?? [];
             <textarea 
                 name="summary" 
                 class="form-control" 
-                placeholder="Description"
+                placeholder="Summary"
                 style="text-align: left;"
             >{!! isset($slidder->summary) ? $slidder->summary : '' !!}</textarea>
         </div>
@@ -74,11 +74,11 @@ $menus = $menus ?? [];
 
     <div class="row">
         <div class="form-group col-sm-12 mt-4">
-            <label for="arabic-description">Arabic Summary:</label>
+            <label for="arabic-description" dir="rtl" class="text-end d-flex">ملخص اللغة العربية:</label>
             <textarea 
                 name="arabic_summary" 
                 class="form-control" 
-                placeholder="Description"
+                placeholder="ملخص اللغة العربية"
                 dir="rtl"
             >{!! isset($slidder->arabic_summary	) ? $slidder->arabic_summary	 : '' !!}</textarea>
         </div>
@@ -86,13 +86,13 @@ $menus = $menus ?? [];
 
     <div class="row">
         <div class="form-group col-sm-6 mt-4">
-            <label for="arabic-description">English Name:</label>
-            <input type="text" name="name" class="form-control" value=" {{ isset($slidder->name) ? $slidder->name : '' }} ">
+            <label for="name">English Name:</label>
+            <input type="text" name="name" placeholder="Name" class="form-control" value="{{ isset($slidder->name) ? $slidder->name : '' }}">
         </div>
 
         <div class="form-group col-sm-6 mt-4">
-            <label for="arabic-description">Arabic Name:</label>
-            <input type="text" name="arabic_name" dir="rtl" class="form-control" value=" {{ isset($slidder->arabic_name) ? $slidder->arabic_name : '' }} ">
+            <label for="arabic_name" dir="rtl" class="text-end d-flex">الاسم العربي:</label>
+            <input type="text" name="arabic_name" dir="rtl" placeholder="الاسم العربي" class="form-control" value="{{ isset($slidder->arabic_name) ? $slidder->arabic_name : '' }}">
         </div>
 
     </div>
@@ -100,11 +100,18 @@ $menus = $menus ?? [];
     <div class="row">
         <div class="form-group col-sm-6 mt-4">
                 <label for="arabic-description">English Attorny :</label>
-                <input type="text" name="attorny" class="form-control" value=" {{ isset($slidder->attorny) ? $slidder->attorny : '' }} ">
+                <input type="text"  placeholder="Attorny" name="attorny" class="form-control" value="{{ isset($slidder->attorny) ? $slidder->attorny : '' }}">
         </div>
             <div class="form-group col-sm-6 mt-4">
-                <label for="arabic-description">Arabic Attorny :</label>
-                <input type="text" name="arabic_attorny" dir="rtl" class="form-control" value=" {{ isset($slidder->arabic_attorny) ? $slidder->arabic_attorny : '' }} ">
+                <label for="arabic-description" dir="rtl" class="text-end d-flex">المحامي العربي :</label>
+                <input 
+                    type="text" 
+                    name="arabic_attorny" 
+                    dir="rtl" 
+                    class="form-control" 
+                    placeholder="أدخل اسم المحامي" 
+                    value="{{ isset($slidder->arabic_attorny) ? $slidder->arabic_attorny : '' }}"
+                >
             </div>
     </div>
 

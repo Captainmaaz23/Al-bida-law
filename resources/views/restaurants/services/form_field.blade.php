@@ -37,11 +37,11 @@ $menus = $menus ?? [];
 <div class="row">
     <div class="form-group col-sm-6">
         <label for="name">Title English:</label>
-        <input type="text" name="name" class="form-control" value="{{ (isset($services->name)) ? $services->name : '' }}">
+        <input type="text" placeholder="English Title" name="name" class="form-control" value="{{ (isset($services->name)) ? $services->name : '' }}">
     </div>
     <div class="form-group col-sm-6">
-        <label for="name">Title Arabic:</label>
-        <input type="text" name="title_arabic" class="form-control" value="{{ (isset($services->title_arabic)) ? $services->title_arabic : '' }}">
+        <label for="name" dir="rtl" style="float: right">العنوان عربي:</label>
+        <input type="text" dir="rtl" placeholder="عنوان" name="title_arabic" class="form-control" value="{{ (isset($services->title_arabic)) ? $services->title_arabic : '' }}">
     </div>
 </div>
 
@@ -59,14 +59,14 @@ $menus = $menus ?? [];
     </div>
     
     <div class="form-group col-sm-6">
-        <label for="description">Arabic Description:</label>
+        <label for="description" dir="rtl" style="float: right">الوصف باللغة العربية:</label>
         <textarea 
             name="arabic_description" 
             class="form-control" 
-            placeholder="Your Description" 
+            placeholder="الوصف الخاص بك" 
             cols="10" 
             rows="5" 
-             
+             dir="rtl"
             maxlength="500">{{ isset($services->arabic_description) ? $services->arabic_description : '' }}</textarea>
     </div>
 </div>

@@ -39,11 +39,11 @@ $menus = $menus ?? [];
 <div class="row">
     <div class="form-group col-sm-6">
         <label for="title">Title English:</label>
-        <input type="text" name="title" class="form-control" value="{{ (isset($about->title)) ? $about->title : '' }}">
+        <input type="text" name="title" placeholder="English Title" class="form-control" value="{{ (isset($about->title)) ? $about->title : '' }}">
     </div>
     <div class="form-group col-sm-6">
-        <label for="name">Title Arabic:</label>
-        <input type="text" name="arabic_title" dir="rtl" class="form-control" value="{{ (isset($about->arabic_title)) ? $about->arabic_title : '' }}">
+        <label for="name" dir="rtl" class="d-flex text-end">العنوان عربي:</label>
+        <input type="text" placeholder="العنوان العربي"  name="arabic_title" dir="rtl" class="form-control" value="{{ (isset($about->arabic_title)) ? $about->arabic_title : '' }}">
     </div>
 </div>
 
@@ -61,14 +61,14 @@ $menus = $menus ?? [];
     </div>
     
     <div class="form-group col-sm-6">
-        <label for="description">Arabic Description:</label>
+        <label for="description" dir="rtl" class="d-flex text-end">الوصف باللغة العربية:</label>
         <textarea 
             name="arabic_description" 
             class="form-control" 
-            placeholder="Your Description" 
+            placeholder="الوصف الخاص بك" 
             cols="10" 
             rows="5" 
-             
+            dir="rtl"
             maxlength="200">{{ isset($about->arabic_description) ? $about->arabic_description : '' }}</textarea>
     </div>
 </div>
@@ -78,13 +78,13 @@ $menus = $menus ?? [];
     <div class="form-group col-sm-6">
         <label for="price">English Image Title:</label>
         <div class="input-group">			
-            <input type="text" name="image_title" value="{{ (isset($about->image_title)) ? $about->arabic_title : '' }}" class="form-control txt_price" step="0.001">
+            <input type="text" name="image_title" value="{{ (isset($about->image_title)) ? $about->arabic_title : '' }}" placeholder="English Title" class="form-control txt_price" step="0.001">
         </div>
     </div>
     <div class="form-group col-sm-6">
-        <label for="price">Arabic Image Title:</label>
+        <label for="price" dir="rtl" class="d-flex text-end">عنوان الصورة باللغة العربية:</label>
         <div class="input-group">			
-            <input type="text" name="arabic_imagetitle" dir="rtl" value="{{ (isset($about->arabic_imagetitle)) ? $about->arabic_imagetitle : '' }}" class="form-control txt_price" step="0.001">
+            <input type="text" placeholder="عنوان الصورة العربية" name="arabic_imagetitle" dir="rtl" value="{{ (isset($about->arabic_imagetitle)) ? $about->arabic_imagetitle : '' }}" class="form-control txt_price" step="0.001">
         </div>
     </div>
 

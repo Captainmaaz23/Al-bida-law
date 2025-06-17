@@ -11,7 +11,7 @@ $cols_span = $show_2nd_col ? 'col-sm-6' : 'col-sm-8';
                 <label for="name">Name:</label>
             </div>
             <div class="col-sm-8">
-                <input type="text" name="name" class="form-control" value="{{ old('name', $team->name ?? '') }}">
+                <input type="text" name="name" placeholder="Name" class="form-control" value="{{ old('name', $team->name ?? '') }}">
                 @error('name')<span class="text-danger">{{ $message }}</span>@enderror
             </div>
         </div>
@@ -20,7 +20,7 @@ $cols_span = $show_2nd_col ? 'col-sm-6' : 'col-sm-8';
                 <label for="image">Image:</label>
             </div>
             <div class="col-sm-8">
-                <input type="file" name="image" class="form-control">
+                <input type="file" name="image"  class="form-control">
                 @error('image')<span class="text-danger">{{ $message }}</span>@enderror
             </div>
         </div>
@@ -29,7 +29,7 @@ $cols_span = $show_2nd_col ? 'col-sm-6' : 'col-sm-8';
                 <label for="title">User Title:</label>
             </div>
             <div class="col-sm-8">
-                <input type="text" name="title" class="form-control" value="{{ old('title', $team->title ?? '') }}">
+                <input type="text" name="title" placeholder="Title" class="form-control" value="{{ old('title', $team->title ?? '') }}">
                 @error('title')<span class="text-danger">{{ $message }}</span>@enderror
             </div>
         </div>
@@ -38,7 +38,7 @@ $cols_span = $show_2nd_col ? 'col-sm-6' : 'col-sm-8';
                 <label for="bio">User Bio:</label>
             </div>
             <div class="col-sm-8">
-                <textarea name="bio" class="form-control">{{ old('bio', $team->bio ?? '') }}</textarea>
+                <textarea name="bio" placeholder="Bio" class="form-control">{{ old('bio', $team->bio ?? '') }}</textarea>
                 @error('bio')<span class="text-danger">{{ $message }}</span>@enderror
             </div>
         </div>
@@ -47,7 +47,7 @@ $cols_span = $show_2nd_col ? 'col-sm-6' : 'col-sm-8';
                 <label for="position">User Position:</label>
             </div>
             <div class="col-sm-8">
-                <input type="text" name="position" class="form-control" value="{{ old('position', $team->position ?? '') }}">
+                <input type="text" name="position" placeholder="Position" class="form-control" value="{{ old('position', $team->position ?? '') }}">
                 @error('position')<span class="text-danger">{{ $message }}</span>@enderror
             </div>
         </div>

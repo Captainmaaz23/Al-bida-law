@@ -22,7 +22,7 @@
 <!-- Start Services Details Area -->
 <div class="services-details-area ptb-100">
     <div class="container">
-        <div class="row justify-content-center">
+        <div class="row justify-content-center" >
             <div class="col-lg-8 col-md-7 col-sm-12 text-end" dir="rtl">
                 <div class="services-details">
                     <div class="img">
@@ -59,17 +59,17 @@
                    
                 </div>
             </div>
-            <div class="col-lg-4 col-md-5 col-sm-12 text-end" dir="rtl">
+            <div class="col-lg-4 col-md-5 col-sm-12 text-end">
                 <div class="side-bar">
-                    <div class="side-bar-box recent-post">
+                    <div class="side-bar-box recent-post" x>
                         <h3 class="title">قصص النجاح</h3>
                         @foreach ($recent_services as $recent)
                         <div class="single-recent-post">
                             <div class="recent-post-img">
                                 <a href="{{ route('front.single_arabic_service', $recent->id) }}"><img src=" {{ url('public/uploads/services/'.$recent->image) }} " alt="Image"></a>
                             </div>
-                            <div class="recent-post-content" dir="rtl" class="text-end">
-                                <div class="row mb-4 justify-content-between text-nowrap" style="direction: rtl;">
+                            <div class="recent-post-content" class="text-end">
+                                <div class="row mb-4 justify-content-between text-nowrap">
                                     <div class="col-auto ms-2">
                                         <i class="las la-calendar"></i>
                                         {{ arabicDiffForHumans($recent->created_at) }}

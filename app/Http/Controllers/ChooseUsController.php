@@ -199,15 +199,19 @@ class ChooseUsController extends Controller
         if ($request->has('sub_heading')) {
             foreach ($request->sub_heading as $key => $subHeading) {
                 $subSummary = $request->sub_summary[$key] ?? null;
+                $arabicSubHeading = $request->arabicsub_heading[$key] ?? null;
+                $arabicSubSummary = $request->arabicsub_summary[$key] ?? null;
                 $subImage = $request->file('sub_image')[$key] ?? null;
                 $detailId = $request->detail_ids[$key] ?? null;
-    
+        
                 $subImageName = null;
-    
+                $arabicSubImageName = null;
+        
                 if ($detailId) {
-                    // Update existing
+                    // Update existing record
                     $detail = ChooseUsDetail::find($detailId);
                     if ($detail) {
+                        // Handle English sub image
                         if ($subImage) {
                             // Delete old sub image
                             if ($detail->sub_image) {
@@ -216,28 +220,33 @@ class ChooseUsController extends Controller
                                     File::delete($oldSubImgPath);
                                 }
                             }
-    
+        
                             $subImageName = time() . '_' . $subImage->getClientOriginalName();
                             $subImage->move(public_path('uploads/why-choose/sub_image'), $subImageName);
                             $detail->sub_image = $subImageName;
                         }
-    
+                      
+        
                         $detail->sub_heading = $subHeading;
                         $detail->sub_summary = $subSummary;
+                        $detail->arabicsub_heading = $arabicSubHeading;
+                        $detail->arabicsub_summary = $arabicSubSummary;
                         $detail->save();
                     }
                 } else {
-                    // Create new
                     if ($subImage) {
                         $subImageName = time() . '_' . $subImage->getClientOriginalName();
                         $subImage->move(public_path('uploads/why-choose/sub_image'), $subImageName);
                     }
-    
+        
+        
                     ChooseUsDetail::create([
                         'choose_us_id' => $choose->id,
                         'sub_heading' => $subHeading,
                         'sub_summary' => $subSummary,
-                        'sub_image' => $subImageName,
+                        'arabicsub_heading' => $arabicSubHeading,
+                        'arabicsub_summary' => $arabicSubSummary,
+                        'sub_image' => $subImageName
                     ]);
                 }
             }

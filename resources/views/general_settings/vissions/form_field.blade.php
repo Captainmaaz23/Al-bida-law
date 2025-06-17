@@ -1,3 +1,4 @@
+
 <?php
 $menus = $menus ?? [];
 
@@ -34,18 +35,20 @@ $menus = $menus ?? [];
     </div>
 </div>
     <div class="row">
-        <div class="form-group col-sm-6">
-            <label for="email">Arabic Title :</label>
-            <input type="text" name="arabic_title" class="form-control" value="{{ isset(($certificate->arabic_title)) ? $certificate->arabic_title : '' }}">
-        </div>
+        
         <div class="form-group col-sm-6">
             <label for="email">English Title :</label>
-            <input type="text" name="title" class="form-control" value="{{ isset(($certificate->title)) ? $certificate->title : '' }}">
+            <input type="text" placeholder="English Title" name="title" class="form-control" value="{{ isset(($certificate->title)) ? $certificate->title : '' }}">
+        </div>
+
+        <div class="form-group col-sm-6">
+            <label for="email" class="d-flex text-end" dir="rtl">العنوان العربي :</label>
+            <input type="text" name="arabic_title" placeholder="العنوان العربي :" dir="rtl" class="form-control" value="{{ isset(($certificate->arabic_title)) ? $certificate->arabic_title : '' }}">
         </div>
     </div>
 
     <div class="form-group col-sm-12 mt-4">
-        <label for="arabic-description">Arabic Description:</label>
+        <label for="arabic-description" class="d-flex text-end" dir="rtl">الوصف باللغة العربية:</label>
         <textarea 
             id="arabic-description"
             name="arabic_description" 

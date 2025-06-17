@@ -37,11 +37,11 @@ $menus = $menus ?? [];
 <div class="row">
     <div class="form-group col-sm-6">
         <label for="name">English Question:</label>
-        <input type="text" name="english_question" class="form-control" value="{{ (isset($question->english_question)) ? $question->english_question : '' }}">
+        <input type="text" placeholder="English Question" name="english_question" class="form-control" value="{{ (isset($question->english_question)) ? $question->english_question : '' }}">
     </div>
     <div class="form-group col-sm-6">
-        <label for="name">Arabic Question:</label>
-        <input type="text" name="arabic_question" class="form-control" value="{{ (isset($question->arabic_question)) ? $question->arabic_question : '' }}">
+        <label for="name" dir="rtl" style="float: right">سؤال عربي:</label>
+        <input type="text" placeholder="سؤال عربي" name="arabic_question" dir="rtl" class="form-control" value="{{ (isset($question->arabic_question)) ? $question->arabic_question : '' }}">
     </div>
 </div>
 
@@ -56,20 +56,20 @@ $menus = $menus ?? [];
             
         >{!! (isset($question->english_description)) ? $question->english_description : '' !!}</textarea>
     </div>
-    
-    <div class="form-group col-sm-12 mt-4">
-        <label for="arabic-description">Arabic Description:</label>
+</div>
+
+<div class="row">
+    <div class="form-group col-12 mt-4 ">
+        <label for="arabic-description" dir="rtl"  class="d-flex text-end ">سؤال عربي:</label>
         <textarea 
             id="arabic-description"
             name="arabic_description" 
-            class="form-control" 
+            class="form-control d-flex" 
             placeholder="الوصف هنا"
             dir="rtl"
-            style="text-align: right;"
         >{!! isset($question->arabic_description) ? $question->arabic_description : '' !!}</textarea>
+        
     </div>
-    
-    
 </div>
 
 

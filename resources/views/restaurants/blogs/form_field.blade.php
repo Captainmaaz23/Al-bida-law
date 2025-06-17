@@ -37,22 +37,22 @@ $menus = $menus ?? [];
 <div class="row">
     <div class="form-group col-sm-6">
         <label for="name">Title English:</label>
-        <input type="text" name="name" class="form-control" value="{{ (isset($blog->name)) ? $blog->name : '' }}">
+        <input type="text" name="name" placeholder="English Title" class="form-control" value="{{ (isset($blog->name)) ? $blog->name : '' }}">
     </div>
     <div class="form-group col-sm-6">
-        <label for="name">Title Arabic:</label>
-        <input type="text" name="arabic_title" class="form-control" value="{{ (isset($blog->arabic_title)) ? $blog->arabic_title : '' }}">
+        <label for="name" dir="rtl" class="d-flex text-end">العنوان عربي:</label>
+        <input type="text" dir="rtl" name="arabic_title" placeholder="العنوان عربي:" class="form-control text-end" value="{{ (isset($blog->arabic_title)) ? $blog->arabic_title : '' }}">
     </div>
 </div>
 
 <div class="row">
     <div class="form-group col-sm-6">
-        <label for="name">Tag English:</label>
-        <input type="text" name="tag" class="form-control" value="{{ (isset($blog->tag)) ? $blog->tag : '' }}">
+        <label for="name" class="d-flex text-end">Tag English:</label>
+        <input type="text" name="tag" placeholder="English Tag" class="form-control" value="{{ (isset($blog->tag)) ? $blog->tag : '' }}">
     </div>
     <div class="form-group col-sm-6">
-        <label for="name">Tag Arabic:</label>
-        <input type="text" name="arabic_tag" class="form-control" value="{{ (isset($blog->arabic_tag)) ? $blog->arabic_tag : '' }}">
+        <label for="name" class="d-flex text-end" dir="rtl">العلامة العربية:</label>
+        <input type="text" name="arabic_tag" dir="rtl" placeholder="العلامة العربية:" class="form-control text-end" value="{{ (isset($blog->arabic_tag)) ? $blog->arabic_tag : '' }}">
     </div>
 </div>
 
@@ -68,22 +68,19 @@ $menus = $menus ?? [];
             
         >{!! (isset($blog->description)) ? $blog->description : '' !!}</textarea>
     </div>
-    
+</div>
+
+<div class="row">
     <div class="form-group col-sm-12 mt-4">
-        <label for="arabic-description">Arabic Description:</label>
+        <label for="english-description" class="d-flex text-end" dir="rtl">الوصف باللغة الإنجليزية:</label>
         <textarea 
             id="arabic-description"
-            name="arabic_description" 
+            name="description" 
             class="form-control" 
-            placeholder="الوصف هنا"
-            dir="ltr"
-            style="text-align: left;"
-        >{!! isset($blog->arabic_description) ? $blog->arabic_description : '' !!}</textarea>
+            placeholder="الوصف باللغة الإنجليزية:"
+            
+        >{!! (isset($blog->description)) ? $blog->description : '' !!}</textarea>
     </div>
-    
-    
-    
-    
 </div>
 
 

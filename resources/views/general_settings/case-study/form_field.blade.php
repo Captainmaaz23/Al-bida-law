@@ -36,33 +36,33 @@ $menus = $menus ?? [];
     <div class="row">
         <div class="form-group col-sm-6">
             <label for="email">English Title :</label>
-            <input type="text" name="title" class="form-control" value="{{ isset(($case_study->title)) ? $case_study->title : '' }}">
+            <input type="text" name="title" placeholder="Title" class="form-control" value="{{ isset(($case_study->title)) ? $case_study->title : '' }}">
         </div>
         <div class="form-group col-sm-6">
-            <label for="email">Arabic Title :</label>
-            <input type="text" name="arabic_title" class="form-control" value="{{ isset(($case_study->arabic_title)) ? $case_study->arabic_title : '' }}">
+            <label for="email" dir="rtl" class="d-flex text-end">العنوان العربي :</label>
+            <input type="text" name="arabic_title" dir="rtl" placeholder="العنوان العربي :" class="form-control" value="{{ isset(($case_study->arabic_title)) ? $case_study->arabic_title : '' }}">
         </div>
     </div>
     <div class="row">
         <div class="form-group col-sm-6">
             <label for="fullname">English Attorny :</label>
-            <input type="text" name="attorny" class="form-control" value="{{ isset(($case_study->attorny)) ? $case_study->attorny : '' }}">
+            <input type="text" placeholder="Attorny" name="attorny" class="form-control" value="{{ isset(($case_study->attorny)) ? $case_study->attorny : '' }}">
         </div>
         <div class="form-group col-sm-6">
-            <label for="fullname">Arabic Attorny :</label>
-            <input type="text" name="arabic_attorny" class="form-control" value="{{ isset(($case_study->arabic_attorny)) ? $case_study->arabic_attorny : '' }}">
+            <label for="fullname" dir="rtl" class="text-end d-flex">المحامي العربي :</label>
+            <input type="text" name="arabic_attorny" dir="rtl" placeholder="المحامي العربي" class="form-control" value="{{ isset(($case_study->arabic_attorny)) ? $case_study->arabic_attorny : '' }}">
         </div>
     </div>
 
     <div class="row">
         <div class="form-group col-sm-6">
             <label for="phone">English Client :</label>
-            <input type="text" name="client" class="form-control" value="{{ isset(($case_study->client)) ? $case_study->client : '' }}">
+            <input type="text" placeholder="Client" name="client" class="form-control" value="{{ isset(($case_study->client)) ? $case_study->client : '' }}">
         </div>
 
         <div class="form-group col-sm-6">
-            <label for="phone">Arabic Client :</label>
-            <input type="text" name="arabic_client" class="form-control" value="{{ isset(($case_study->arabic_client)) ? $case_study->arabic_client : '' }}">
+            <label for="phone" dir="rtl" class="text-end d-flex">العميل العربي :</label>
+            <input type="text" name="arabic_client" dir="rtl" placeholder="العميل العربي " class="form-control" value="{{ isset(($case_study->arabic_client)) ? $case_study->arabic_client : '' }}">
         </div>
         
     </div>
@@ -70,11 +70,11 @@ $menus = $menus ?? [];
     <div class="row">
         <div class="form-group col-sm-6">
             <label for="city">English Decision :</label>
-            <input type="text" name="decision" class="form-control" value="{{ isset(($case_study->decision)) ? $case_study->decision : '' }}">
+            <input type="text" placeholder="Decision" name="decision" class="form-control" value="{{ isset(($case_study->decision)) ? $case_study->decision : '' }}">
         </div>
         <div class="form-group col-sm-6">
-            <label for="city">Arabic Decision :</label>
-            <input type="text" name="arabic_decision" class="form-control" value="{{ isset(($case_study->arabic_decision)) ? $case_study->arabic_decision : '' }}">
+            <label for="city" dir="rtl" class="text-end d-flex">القرار العربي :</label>
+            <input type="text" name="arabic_decision" dir="rtl" placeholder="القرار العربي :" class="form-control" value="{{ isset(($case_study->arabic_decision)) ? $case_study->arabic_decision : '' }}">
         </div>
     </div>
 

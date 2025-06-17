@@ -39,8 +39,8 @@ $menus = $menus ?? [];
             <input type="text" name="heading" class="form-control" value="{{ isset(($client_review->heading)) ? $client_review->heading : '' }}">
         </div>
         <div class="form-group col-sm-6">
-            <label for="email">Arabic Heading :</label>
-            <input type="text" name="heading_arabic" class="form-control" value="{{ isset(($client_review->heading_arabic)) ? $client_review->heading_arabic : '' }}">
+            <label for="email" class="d-flex text-end" dir="rtl">العنوان العربي :</label>
+            <input type="text" name="heading_arabic" placeholder="العنوان العربي" class="form-control" dir="rtl" value="{{ isset(($client_review->heading_arabic)) ? $client_review->heading_arabic : '' }}">
         </div>
     </div>
     <div class="row">
@@ -54,12 +54,13 @@ $menus = $menus ?? [];
         </div>
     
         <div class="form-group col-sm-6">
-            <label for="summary_arabic">Arabic Summary:</label>
+            <label for="summary_arabic" dir="rtl" class="d-flex text-end">ملخص اللغة العربية:</label>
             <textarea 
                 name="summary_arabic" 
-                class="form-control" 
+                class="form-control"
+                dir="rtl" 
                 rows="4"
-                placeholder="Enter Arabic summary">{{ isset($client_review->summary_arabic) ? $client_review->summary_arabic : '' }}</textarea>
+                placeholder="ملخص اللغة العربية:">{{ isset($client_review->summary_arabic) ? $client_review->summary_arabic : '' }}</textarea>
         </div>
     </div>
     

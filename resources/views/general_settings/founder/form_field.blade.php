@@ -36,33 +36,33 @@ $menus = $menus ?? [];
     <div class="row">
         <div class="form-group col-sm-6">
             <label for="email">Founder Name :</label>
-            <input type="text" name="founder_name" class="form-control" value="{{ isset(($founder->founder_name)) ? $founder->founder_name : '' }}">
+            <input type="text" name="founder_name" placeholder="Founder Name" class="form-control" value="{{ isset(($founder->founder_name)) ? $founder->founder_name : '' }}">
         </div>
         <div class="form-group col-sm-6">
-            <label for="email">Arabic Name :</label>
-            <input type="text" name="arabic_name" class="form-control" value="{{ isset(($founder->arabic_name)) ? $founder->arabic_name : '' }}">
+            <label for="email" dir="rtl" class="text-end d-flex">اسم المؤسس:</label>
+            <input type="text" name="arabic_name" placeholder="اسم المؤسس" dir="rtl" class="form-control" value="{{ isset(($founder->arabic_name)) ? $founder->arabic_name : '' }}">
         </div>
     </div>
 
     <div class="row">
         <div class="form-group col-sm-6">
             <label for="fullname">English Designation :</label>
-            <input type="text" name="designation" class="form-control" value="{{ isset(($founder->designation)) ? $founder->designation : '' }}">
+            <input type="text" name="designation" placeholder="Designation" class="form-control" value="{{ isset(($founder->designation)) ? $founder->designation : '' }}">
         </div>
         <div class="form-group col-sm-6">
-            <label for="email">Arabic Designation :</label>
-            <input type="text" name="arabic_designation" class="form-control" value="{{ isset(($founder->arabic_designation)) ? $founder->arabic_designation : '' }}">
+            <label for="email" class="text-end d-flex" dir="rtl">التسمية العربية:</label>
+            <input type="text" name="arabic_designation" dir="rtl" placeholder="التسمية العربية" class="form-control" value="{{ isset(($founder->arabic_designation)) ? $founder->arabic_designation : '' }}">
         </div>
     </div>
 
     <div class="row">
         <div class="form-group col-sm-6">
             <label for="city">English Message :</label>
-            <input type="text" name="message" class="form-control" value="{{ isset(($founder->message)) ? $founder->message : '' }}">
+            <input type="text" placeholder="Message" name="message" class="form-control" value="{{ isset(($founder->message)) ? $founder->message : '' }}">
         </div>
         <div class="form-group col-sm-6">
-            <label for="city">Arabic Message :</label>
-            <input type="text" name="arabic_message" class="form-control" value="{{ isset(($founder->arabic_message)) ? $founder->arabic_message : '' }}">
+            <label for="city" class="text-end d-flex" dir="rtl">الرسالة العربية:</label>
+            <input type="text" name="arabic_message" placeholder="الرسالة العربية:"  dir="rtl" class="form-control" value="{{ isset(($founder->arabic_message)) ? $founder->arabic_message : '' }}">
         </div>
     </div>
 

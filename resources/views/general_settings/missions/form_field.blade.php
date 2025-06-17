@@ -34,25 +34,26 @@ $menus = $menus ?? [];
     </div>
 </div>
     <div class="row">
-        <div class="form-group col-sm-6">
-            <label for="email">Arabic Title :</label>
-            <input type="text" name="arabic_title" class="form-control" value="{{ isset(($certificate->arabic_title)) ? $certificate->arabic_title : '' }}">
-        </div>
+        
         <div class="form-group col-sm-6">
             <label for="email">English Title :</label>
-            <input type="text" name="title" class="form-control" value="{{ isset(($certificate->title)) ? $certificate->title : '' }}">
+            <input type="text" name="title" placeholder="English Title" class="form-control" value="{{ isset(($certificate->title)) ? $certificate->title : '' }}">
+        </div>
+
+        <div class="form-group col-sm-6">
+            <label for="email" dir="rtl" class="text-end d-flex" dir="rtl">العنوان العربي :</label>
+            <input type="text" name="arabic_title" placeholder="العنوان العربي :" dir="rtl" class="form-control" value="{{ isset(($certificate->arabic_title)) ? $certificate->arabic_title : '' }}">
         </div>
     </div>
 
     <div class="form-group col-sm-12 mt-4">
-        <label for="arabic-description">Arabic Description:</label>
+        <label for="arabic-description" class="text-end d-flex" dir="rtl">الوصف باللغة العربية:</label>
         <textarea 
             id="arabic-description"
             name="arabic_description" 
             class="form-control" 
-            placeholder="الوصف هنا"
+            placeholder="الوصف باللغة العربية:"
             dir="rtl"
-            style="text-align: right;"
         >{!! isset($certificate->arabic_description) ? $certificate->arabic_description : '' !!}</textarea>
     </div>
     <div class="form-group col-sm-12 mt-4">

@@ -36,22 +36,22 @@ $menus = $menus ?? [];
     <div class="row">
         <div class="form-group col-sm-6">
             <label for="fullname">Full Name:</label>
-            <input type="text" name="fullname" class="form-control">
+            <input type="text" name="fullname" placeholder="Full Name" class="form-control">
         </div>
         <div class="form-group col-sm-6">
             <label for="email">Email:</label>
-            <input type="text" name="email" class="form-control">
+            <input type="text" name="email" placeholder="Email" class="form-control">
         </div>
     </div>
 
     <div class="row">
         <div class="form-group col-sm-6">
             <label for="phone">Phone:</label>
-            <input type="text" name="phone" class="form-control">
+            <input type="text" name="phone" placeholder="Phone Number" class="form-control">
         </div>
         <div class="form-group col-sm-6">
             <label for="city">City:</label>
-            <input type="text" name="city" class="form-control">
+            <input type="text" name="city" placeholder="City" class="form-control">
         </div>
     </div>
     <div class="row">
@@ -62,7 +62,7 @@ $menus = $menus ?? [];
     </div>
     <div class="row">
         <div class="form-group col-sm-12 mt-4">
-            <label for="message">Message:</label>
+            <label for="message">Description:</label>
             <textarea 
                 name="message" 
                 class="form-control" 

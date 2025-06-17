@@ -36,42 +36,42 @@ $menus = $menus ?? [];
     <div class="row">
         <div class="form-group col-sm-6">
             <label for="email">Email:</label>
-            <input type="text" name="email" class="form-control" value="{{ isset(($companydetail->email)) ? $companydetail->name : '' }}">
+            <input type="text" name="email" placeholder="Email" class="form-control" value="{{ isset(($companydetail->email)) ? $companydetail->name : '' }}">
         </div>
         <div class="form-group col-sm-6">
             <label for="fullname">Phone Number:</label>
-            <input type="text" name="phonenumber" class="form-control" value="{{ isset(($companydetail->phonenumber)) ? $companydetail->phonenumber : '' }}">
+            <input type="text" name="phonenumber" placeholder="Phone Number" class="form-control" value="{{ isset(($companydetail->phonenumber)) ? $companydetail->phonenumber : '' }}">
         </div>
     </div>
 
     <div class="row">
         <div class="form-group col-sm-6">
             <label for="phone">Facebook Link:</label>
-            <input type="text" name="facebook" class="form-control" value="{{ isset(($companydetail->facebook)) ? $companydetail->facebook : '' }}">
+            <input type="text" name="facebook" placeholder="Facebook" class="form-control" value="{{ isset(($companydetail->facebook)) ? $companydetail->facebook : '' }}">
         </div>
         <div class="form-group col-sm-6">
             <label for="city">Snapchat:</label>
-            <input type="text" name="snapchat" class="form-control" value="{{ isset(($companydetail->snapchat)) ? $companydetail->snapchat : '' }}">
+            <input type="text" name="snapchat" placeholder="Snapchat" class="form-control" value="{{ isset(($companydetail->snapchat)) ? $companydetail->snapchat : '' }}">
         </div>
     </div>
     <div class="row">
         <div class="form-group col-sm-6">
             <label for="phone">Instagram Link:</label>
-            <input type="text" name="instagram" class="form-control" value="{{ isset(($companydetail->instagram)) ? $companydetail->instagram : '' }}">
+            <input type="text" name="instagram" placeholder="Instagram" class="form-control" value="{{ isset(($companydetail->instagram)) ? $companydetail->instagram : '' }}">
         </div>
         <div class="form-group col-sm-6">
             <label for="city">Twitter:</label>
-            <input type="text" name="twitter" class="form-control" value="{{ isset(($companydetail->twitter)) ? $companydetail->twitter : '' }}">
+            <input type="text" name="twitter" placeholder="Twitter" class="form-control" value="{{ isset(($companydetail->twitter)) ? $companydetail->twitter : '' }}">
         </div>
     </div>
     <div class="row">
         <div class="form-group col-sm-6">
             <label for="phone">Youtube Link:</label>
-            <input type="text" name="youtube" class="form-control" value="{{ isset(($companydetail->youtube)) ? $companydetail->youtube : '' }}">
+            <input type="text" name="youtube" placeholder="Youtube" class="form-control" value="{{ isset(($companydetail->youtube)) ? $companydetail->youtube : '' }}">
         </div>
         <div class="form-group col-sm-6">
             <label for="city">Address:</label>
-            <input type="text" name="address" class="form-control" value="{{ isset(($companydetail->address)) ? $companydetail->address : '' }}">
+            <input type="text" name="address" placeholder="Address" class="form-control" value="{{ isset(($companydetail->address)) ? $companydetail->address : '' }}">
         </div>
     </div>
 
