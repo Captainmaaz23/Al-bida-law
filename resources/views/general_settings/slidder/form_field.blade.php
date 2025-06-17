@@ -36,7 +36,7 @@ $menus = $menus ?? [];
 
     <div class="row">
         <div class="form-group col-sm-12 mt-4">
-            <label for="arabic-description">Slidder Description:</label>
+            <label for="arabic-description">English Description:</label>
             <textarea 
                 id="text"
                 name="text" 
@@ -47,9 +47,22 @@ $menus = $menus ?? [];
         </div>
     </div>
 
+    <div class="row text-end">
+        <div class="form-group col-sm-12 mt-4">
+            <label for="arabic-description">Arabic Description:</label>
+            <textarea 
+    id="arabictext"
+    name="arabic_text" 
+    class="form-control" 
+    dir="rtl"
+    placeholder="الوصف"
+>{!! isset($slidder->arabic_text) ? $slidder->arabic_text : '' !!}</textarea>
+        </div>
+    </div>
+
     <div class="row">
         <div class="form-group col-sm-12 mt-4">
-            <label for="arabic-description">Slidder Summary:</label>
+            <label for="arabic-description">English Summary:</label>
             <textarea 
                 name="summary" 
                 class="form-control" 
@@ -60,17 +73,40 @@ $menus = $menus ?? [];
     </div>
 
     <div class="row">
+        <div class="form-group col-sm-12 mt-4">
+            <label for="arabic-description">Arabic Summary:</label>
+            <textarea 
+                name="arabic_summary" 
+                class="form-control" 
+                placeholder="Description"
+                dir="rtl"
+            >{!! isset($slidder->arabic_summary	) ? $slidder->arabic_summary	 : '' !!}</textarea>
+        </div>
+    </div>
+
+    <div class="row">
         <div class="form-group col-sm-6 mt-4">
-            <label for="arabic-description">Name:</label>
+            <label for="arabic-description">English Name:</label>
             <input type="text" name="name" class="form-control" value=" {{ isset($slidder->name) ? $slidder->name : '' }} ">
         </div>
 
         <div class="form-group col-sm-6 mt-4">
-            <label for="arabic-description">Attorny :</label>
-            <input type="text" name="attorny" class="form-control" value=" {{ isset($slidder->attorny) ? $slidder->attorny : '' }} ">
+            <label for="arabic-description">Arabic Name:</label>
+            <input type="text" name="arabic_name" dir="rtl" class="form-control" value=" {{ isset($slidder->arabic_name) ? $slidder->arabic_name : '' }} ">
         </div>
-    </div>
 
+    </div>
+    
+    <div class="row">
+        <div class="form-group col-sm-6 mt-4">
+                <label for="arabic-description">English Attorny :</label>
+                <input type="text" name="attorny" class="form-control" value=" {{ isset($slidder->attorny) ? $slidder->attorny : '' }} ">
+        </div>
+            <div class="form-group col-sm-6 mt-4">
+                <label for="arabic-description">Arabic Attorny :</label>
+                <input type="text" name="arabic_attorny" dir="rtl" class="form-control" value=" {{ isset($slidder->arabic_attorny) ? $slidder->arabic_attorny : '' }} ">
+            </div>
+    </div>
 
     <div class="row">
         <div class="form-group col-sm-12">
@@ -93,7 +129,7 @@ $menus = $menus ?? [];
     <script>
         const licenseKey = 'eyJhbGciOiJFUzI1NiJ9.eyJleHAiOjE3NDk1OTk5OTksImp0aSI6ImU5NTNhOGQ5LTdmZDMtNGNjOC04MjNmLTUzMTEwZGM1Mzg0MyIsInVzYWdlRW5kcG9pbnQiOiJodHRwczovL3Byb3h5LWV2ZW50LmNrZWRpdG9yLmNvbSIsImRpc3RyaWJ1dGlvbkNoYW5uZWwiOlsiY2xvdWQiLCJkcnVwYWwiLCJzaCJdLCJ3aGl0ZUxhYmVsIjp0cnVlLCJsaWNlbnNlVHlwZSI6InRyaWFsIiwiZmVhdHVyZXMiOlsiKiJdLCJ2YyI6Ijk4YmEwZjIwIn0.FuNeXRIdWnGs6TaN9LP3h1SK6RB2Aj0weOzIqkZMM46tGJo26MrhWMU2Kg01lVmYEqSNMEIdxFKvhuFFj1xKUQ';
 
-        ['#text'].forEach(selector => {
+        ['#text','#arabictext'].forEach(selector => {
             ClassicEditor
                 .create(document.querySelector(selector), {
                     licenseKey: licenseKey,

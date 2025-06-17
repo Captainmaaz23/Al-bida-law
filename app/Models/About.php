@@ -15,6 +15,7 @@ class About extends Model
         'image_title',
         'status',
         'created_by',
-        'updated_by'
+        'updated_by',
+        'arabic_imagetitle'
     ];
 }

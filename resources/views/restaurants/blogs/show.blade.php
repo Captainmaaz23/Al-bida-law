@@ -42,11 +42,28 @@
                 </div>
             </div>
             <div class="mt-4 row" dir="rtl">
+                
+                <div class="col-md-9 text-end" style="font-family: 'Arial', sans-serif; font-weight:bold">
+                    {{ $blog->arabic_title ?? '' }}
+                </div>
                 <div class="col-md-3 text-start">
                     <label style="font-weight: bold;">العنوان بالعربية</label>
                 </div>
+            </div>
+            <div class="mt-4 row">
+                <div class="col-md-3">
+                    <label>Tag English</label>
+                </div>
+                <div class="col-md-9">
+                    {{ $blog->tag }}
+                </div>
+            </div>
+            <div class="mt-4 row" dir="rtl">
+                <div class="col-md-3 text-start">
+                    <label style="font-weight: bold;">العلامة الإنجليزية</label>
+                </div>
                 <div class="col-md-9 text-end" style="font-family: 'Arial', sans-serif; font-weight:bold">
-                    {{ $blog->arabic_title ?? '' }}
+                    {{ $blog->arabic_tag ?? '' }}
                 </div>
             </div>
             

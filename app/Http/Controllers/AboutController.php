@@ -195,12 +195,13 @@ class AboutController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-            'title' => 'required|string|max:255',
-            'arabic_title' => 'required|string|max:255',
-            'description' => 'required|string',
-            'arabic_description' => 'required|string',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'image_title' => 'required|string|max:255',
+            'title' => 'string|max:255',
+            'arabic_title' => 'string|max:255',
+            'description' => 'string',
+            'arabic_description' => 'string',
+            'image' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
+            'image_title' => 'string|max:255',
+            'arabic_imagetitle' => 'string|max:255',
         ]);
 
         if ($request->hasFile('image')) {
@@ -246,6 +247,7 @@ class AboutController extends Controller
         'arabic_description' => 'nullable|string',
         'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         'image_title' => 'nullable|string|max:255',
+        'arabic_imagetitle' => 'nullable|string|max:255',
     ]);
 
     $about = About::findOrFail($id);
@@ -271,6 +273,7 @@ class AboutController extends Controller
     $about->description = $request->input('description');
     $about->arabic_description = $request->input('arabic_description');
     $about->image_title = $request->input('image_title');
+    $about->arabic_imagetitle = $request->input('arabic_imagetitle');
     $about->updated_by = Auth::id();
 
     $about->save();

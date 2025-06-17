@@ -57,7 +57,7 @@
                         @foreach ($recent_blogs as $recent)
                             <div class="single-recent-post">
                                 <div class="recent-post-img">
-                                    <a href="javascript:void(0)"><img src="{{ url('public/uploads/blogs/',$recent->image) }}" alt="Image"></a>
+                                    <a href="{{ route('front.single_arabic_blog',$recent->id) }}"><img src="{{ url('public/uploads/blogs/',$recent->image) }}" alt="Image"></a>
                                 </div>
                                 <div class="recent-post-content">
                                     <div class="row mb-4 justify-content-between text-nowrap" style="direction: rtl;">
@@ -80,7 +80,7 @@
                         <h3 class="title">فئات</h3>
                         <ul>
                             @foreach ($services as $service)
-                            <li><a href="blog-details.html"><i class="las la-angle-double-right"></i></i> {{$service->title_arabic}} </a></li>
+                            <li><a href="{{ route('front.single_arabic_blog',$recent->id) }}"><i class="las la-angle-double-right"></i></i> {{$service->title_arabic}} </a></li>
                             @endforeach
                         </ul>
                     </div>
@@ -89,7 +89,7 @@
                         <h3 class="title">العلامات</h3>
                         <ul>
                             @foreach ($tags as $tag)
-                            <li><a href="blog-details.html">{{$tag->arabic_tag}}</a></li>
+                            <li><a href="javascript:void(0)">{{$tag->arabic_tag}}</a></li>
                             @endforeach
                         </ul>
                     </div>

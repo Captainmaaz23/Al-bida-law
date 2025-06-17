@@ -47,14 +47,15 @@ $menus = $menus ?? [];
 
 <div class="row">
     <div class="form-group col-sm-6">
-        <label for="name">English Tag :</label>
+        <label for="name">Tag English:</label>
         <input type="text" name="tag" class="form-control" value="{{ (isset($blog->tag)) ? $blog->tag : '' }}">
     </div>
     <div class="form-group col-sm-6">
-        <label for="name">Arabic Tag :</label>
-        <input type="text" name="arabic_tag" class="form-control" value="{{ (isset($blog->arabic_tag)) ? $blog->arabic_title : '' }}">
+        <label for="name">Tag Arabic:</label>
+        <input type="text" name="arabic_tag" class="form-control" value="{{ (isset($blog->arabic_tag)) ? $blog->arabic_tag : '' }}">
     </div>
 </div>
+
 
 <div class="row">
     <div class="form-group col-sm-12 mt-4">
