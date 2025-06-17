@@ -81,9 +81,9 @@
                                 {!! Str::limit($blog->arabic_description, 60) !!}
                             </p>
 
-                            <a href="{{ route('front.single_arabic_blog', $blog->id) }}" class="read-more">
-                                <i class="las la-angle-double-right"></i>
+                            <a href="{{ route('front.single_arabic_blog', $blog->id) }}" class="read-more d-flex text-end" dir="rtl">
                                 اقرأ المزيد
+                                <i class="las la-angle-double-left mt-1"></i>
                             </a>
 
                         </div>
