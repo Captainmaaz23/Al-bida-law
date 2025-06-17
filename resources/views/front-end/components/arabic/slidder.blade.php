@@ -2,7 +2,8 @@
 <div class="hero-slider owl-carousel owl-theme">
     @foreach ($slidder as $index => $slide)
         <div class="hero-slider-item"
-            style="background-image: url('{{ url('public/uploads/slidder/' . $slide->image) }}');">
+            style="direction: rtl; text-align:right; background-image:
+            url('{{ url('public/uploads/slidder/' . $slide->image) }}');">
             <div class="d-table">
                 <div class="d-table-cell">
                     <div class="container">
