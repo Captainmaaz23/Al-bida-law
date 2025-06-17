@@ -42,7 +42,7 @@
                         <p>{!! Str::limit($blog->arabic_description,60) !!}</p>
 
                         <a href="{{ route('front.single_arabic_blog',$blog->id) }}" class="read-more">
-                            اقرأ المزيد <i class="las la-angle-double-right"></i>
+                            اقرأ المزيد <i class="las la-angle-double-left"></i>
                         </a>
                     </div>
                 </div>
