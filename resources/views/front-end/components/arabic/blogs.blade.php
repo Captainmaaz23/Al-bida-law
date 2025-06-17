@@ -11,23 +11,6 @@
         </div>
         <div class="row justify-content-center">
             @foreach ($blogs as $blog)
-<<<<<<< HEAD
-            <div class="col-lg-4 col-sm-6">
-                <a href="{{ url('public/uploads/blogs/' . $blog->image) }}" data-lightbox="blog-gallery">
-                    <img 
-                        src="{{ url('public/uploads/blogs/' . $blog->image) }}" 
-                        alt="Not Found"
-                        style="height: 80vh; object-fit: cover; width: 100%; object-position: center center; border-radius: 8px;"
-                    />
-                </a>
-                
-                <div class="blog-card blogcardhome" style="height: 250px">
-                    
-                    <div class="blog-card-text">
-                        <h3 class="text-end" >
-                            <a href="javascript:void(0)">
-                                {!! Str::limit($blog->arabic_title,30) !!}
-=======
                 <div class="col-lg-4 col-sm-6">
                     <a href="{{ url('public/uploads/blogs/' . $blog->image) }}" data-lightbox="blog-gallery">
                         <img src="{{ url('public/uploads/blogs/' . $blog->image) }}" alt="Not Found"
@@ -101,7 +84,6 @@
                             <a href="{{ route('front.single_arabic_blog', $blog->id) }}" class="read-more">
                                 <i class="las la-angle-double-right"></i>
                                 اقرأ المزيد
->>>>>>> 2c0888985385051df6b7b5d6f13a9e01d276b781
                             </a>
 
                         </div>
