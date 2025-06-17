@@ -60,52 +60,73 @@
                     <form method="post" action="{{ route('contact.store') }}">
                         @csrf
                         <div class="row justify-content-center">
+
+
                             <div class="col-md-6">
-                                <div class="form-group">
-                                    <input type="text" name="fullname" class="form-control"
-                                        style="background-color: gray; font-size:16px" id="name" required
-                                        placeholder="الاسم الكامل" dir="rtl">
-                                    <i class="las la-user"></i>
+                                <div class="form-group" dir="rtl">
+                                    <div class="form-group position-relative" dir="rtl">
+                                        <input type="email" name="email" class="form-control" id="email"
+                                            style="background-color:gray; font-size:16px;  padding-right: 70px;"
+                                            required placeholder="عنوان البريد الإلكتروني" dir="rtl">
+                                        <i class="las la-envelope position-absolute"
+                                            style="right:0; top: 50%; transform: translateY(-50%);"></i>
+                                    </div>
                                 </div>
                             </div>
 
                             <div class="col-md-6">
-                                <div class="form-group">
-                                    <input type="email" name="email" class="form-control" id="email" required
-                                        placeholder="عنوان البريد الإلكتروني"
-                                        style="background-color:gray; font-size:16px" dir="rtl">
-                                    <i class="las la-envelope"></i>
+                                <div class="form-group" dir="rtl">
+                                    <div class="form-group position-relative" dir="rtl">
+                                        <input type="text" name="fullname" class="form-control"
+                                            style="background-color: gray; font-size:16px; padding-right: 70px;"
+                                            id="name" required placeholder="الاسم الكامل" dir="rtl">
+                                        <i class="las la-user position-absolute"
+                                            style="right:0; top: 50%; transform: translateY(-50%);"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-6">
+                                <div class="form-group" dir="rtl">
+                                    <div class="form-group position-relative" dir="rtl">
+                                        <input type="text" name="phone" class="form-control" id="Phone"
+                                            required placeholder="رقم الهاتف"
+                                            style="background-color: gray; font-size:16px; padding-right: 70px;"
+                                            dir="rtl">
+                                        <i class="las la-phone position-absolute"
+                                            style="right:0; top: 50%; transform: translateY(-50%);"></i>
+                                    </div>
                                 </div>
                             </div>
 
                             <div class="col-md-6">
-                                <div class="form-group">
-                                    <input type="text" name="phone" class="form-control" id="Phone" required
-                                        placeholder="رقم الهاتف" style="background-color:gray; font-size:16px "
+                                <div class="form-group" dir="rtl">
+                                    <div class="form-group
+                                    position-relative"
                                         dir="rtl">
-                                    <i class="las la-phone"></i>
-                                </div>
-                            </div>
+                                        <!-- Hidden real date input -->
+                                        <input type="date" id="real-date"
+                                            style="opacity: 0; position: absolute; width: 100%; height: 100%; cursor: pointer;">
 
-                            <div class="col-md-6">
-                                <div class="form-group" style="position: relative;">
-                                    <!-- Hidden real date input -->
-                                    <input type="date" id="real-date"
-                                        style="opacity: 0; position: absolute; width: 100%; height: 100%; cursor: pointer;">
-
-                                    <!-- Visible fake input -->
-                                    <input type="text" id="fake-date" class="form-control"
-                                        style="background-color: gray; font-size:16px" placeholder="يوم/شهر/سنة"
-                                        dir="rtl" readonly>
-                                    <i class="las la-calendar"></i>
+                                        <!-- Visible fake input -->
+                                        <input type="text" id="fake-date" class="form-control"
+                                            style="background-color: gray; font-size:16px;  padding-right: 70px; "
+                                            placeholder="يوم/شهر/سنة" dir="rtl" readonly>
+                                        <i class="las la-calendar position-absolute"
+                                            style="right:0; top: 50%; transform: translateY(-50%);"></i>
+                                    </div>
                                 </div>
                             </div>
 
                             <div class="col-lg-12 col-md-12">
-                                <div class="form-group">
-                                    <textarea name="message" id="message" class="form-control" cols="30" rows="6" required
-                                        placeholder="أكتب رسالتك..." style="background-color:gray; font-size:16px" dir="rtl"></textarea>
-                                    <i class="las la-sms"></i>
+                                <div class="form-group" dir="rtl">
+                                    <div class="form-group position-relative" dir="rtl">
+                                        <textarea name="message" id="message" class="form-control" cols="30" rows="6" required
+                                            placeholder="أكتب رسالتك..." style="background-color:gray; font-size:16px; padding-right: 70px;" dir="rtl"></textarea>
+                                        <i class="las la-sms position-absolute"
+                                            style="right:0; top: 16%; transform: translateY(-50%);"></i>
+                                    </div>
                                 </div>
                             </div>
 

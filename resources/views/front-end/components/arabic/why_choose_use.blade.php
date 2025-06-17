@@ -24,11 +24,15 @@
                         @foreach ($choose->details as $detail)
                             <div class="choose-card" dir="rtl">
                                 <div class="d-flex align-items-start gap-3">
-                                    <i class="item-left">
+                                    <!-- Image box with white background -->
+                                    <div
+                                        style="flex-shrink: 0; background-color: #fff; padding: 10px; border-radius: 5px;">
                                         <img src="{{ url('public/uploads/why-choose/sub_image/' . $detail->sub_image) }}"
-                                            alt="Image" class="pt-2" />
-                                    </i>
-                                    <div>
+                                            alt="Image" style="max-width: 60px; height: auto;" />
+                                    </div>
+
+                                    <!-- Text box -->
+                                    <div class="flex-grow-1">
                                         <h3 class="text-end">{{ $detail->arabicsub_heading ?? '' }}</h3>
                                         <p class="text-end">{{ $detail->arabicsub_summary ?? '' }}</p>
                                     </div>
