@@ -167,6 +167,8 @@ Route::get('/dashboard', [HomeController::class, 'index'])->middleware(['auth'])
         Route::get('/arabicPage',[IndexController::class,'arabicPage'])->name('arabicPage');
         Route::get('/single-arabic-blog/{id}',[IndexController::class,'Single_Arabic_Blog'])->name('single_arabic_blog');
         Route::get('/all-arabicblogs', [IndexController::class,'AllArabicBlogs'])->name('allarabicblogs');
+        Route::get('/arabic-services',[IndexController::class,'arabicservice'])->name('arabic_service');
+        Route::get('/single-arabic-services/{id}',[IndexController::class,'singlearabicservice'])->name('single_arabic_service');
 
     });
     

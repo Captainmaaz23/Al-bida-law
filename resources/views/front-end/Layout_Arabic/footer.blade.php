@@ -37,8 +37,8 @@
                 <div class="footer-widget pl-50">
                     <h3>روابط سريعة</h3>
             
-                    <ul class="footer-text" dir="rtl">
-                        <li>
+                    <ul class="footer-text">
+                        <li dir="ltr">
                             <a href="javascript:void(0)">
                                 <i class="las la-star"></i>
                                 بيت

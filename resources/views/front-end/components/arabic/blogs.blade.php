@@ -22,7 +22,7 @@
                 <div class="blog-card blogcardhome" style="height: 250px">
                     
                     <div class="blog-card-text">
-                        <h3 class="text-end" style="direction: rtl;">
+                        <h3 class="text-end" >
                             <a href="javascript:void(0)">
                                 {!! Str::limit($blog->arabic_title,30) !!}
                             </a>

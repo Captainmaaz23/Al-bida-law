@@ -21,29 +21,28 @@
     <div class="container">
         <div class="row justify-content-center">
             @foreach ($blogs as $blog)
-            <div class="col-4">
+            <div class="col-4 text-end" dir="rtl">
                 <div class="blog-card">
                     <a href="blog-details.html">
                         <img src=" {{ url('public/uploads/blogs/'.$blog->image) }}" style="width: 100%;height:60vh" alt="Image">
                     </a>
                     <div class="blog-card-text">
                         <h3><a href="blog-details.html">{{ Str::limit($blog->arabic_title,30) }}</a></h3>
-                        <ul>
-                            <li>
+                        <div class="row mb-4 justify-content-between text-nowrap" style="direction: rtl;">
+                            <div class="col-auto ms-2">
                                 <i class="las la-calendar"></i>
-                                {{ optional($blog->created_at)->format('h:i A') }}
-
-                            </li>
-                            <li>
+                                {{ arabicDiffForHumans($blog->created_at) }}
+                            </div>
+                            <div class="col-auto">
                                 <i class="las la-user-alt"></i>
-                                {{ Auth::user()->name }}
-                            </li>
-                        </ul>
+                                {!!optional($blog->user)->name ?? 'زائر' !!}
+                            </div>
+                        </div>
 
-                        <p>{!! Str::limit($blog->arabic_description,40) !!}</p>
+                        <p>{!! Str::limit($blog->arabic_description,60) !!}</p>
 
                         <a href="{{ route('front.single_arabic_blog',$blog->id) }}" class="read-more">
-                            Read More <i class="las la-angle-double-right"></i>
+                            اقرأ المزيد <i class="las la-angle-double-right"></i>
                         </a>
                     </div>
                 </div>

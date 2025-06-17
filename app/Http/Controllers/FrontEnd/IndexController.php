@@ -88,4 +88,20 @@ class IndexController extends Controller
         $blogs = Blogs::orderBy('created_at', 'desc')->paginate(3); // 6 items per page
         return view('front-end.Arabic-Components.arabic_articles',compact('logo','blogs'));
     }
+
+    public function arabicservice(){
+        $logo = Logo::first();
+        $services = Services::orderBy('created_at','desc')->get();
+        return view('front-end.Arabic-Components.arabic_services',compact('logo','services'));
+    }
+
+    public function singlearabicservice($id){
+        $logo = Logo::first();
+        $single_service = Services::find($id);
+        $recent_services = Services::with('user')->orderBy('created_at','desc')->take(3)->get();
+        $services_name = Services::select('title_arabic')->get();
+        $blog_tag = Blogs::select('arabic_tag')->get();
+        // return $blog_tag;
+        return view('front-end.Arabic-Components.single_arabicservice',compact('logo','single_service','recent_services','services_name','blog_tag'));
+    }
 }

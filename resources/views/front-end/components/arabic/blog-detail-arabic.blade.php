@@ -6,7 +6,7 @@
                 <div class="page-content">
                     <h2>تفاصيل المدونة</h2>
                     <ul>
-                        <li><a href="">Home <i class="las la-angle-right"></i></a></li>
+                        <li><a href="">بيت <i class="las la-angle-right"></i></a></li>
                         <li>تفاصيل المدونة</li>
                     </ul>
                 </div>
@@ -20,7 +20,7 @@
 <div class="services-details-area ptb-100">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-lg-8 col-md-7 col-sm-12">
+            <div class="col-lg-8 col-md-7 col-sm-12 text-end" dir="rtl">
                 <div class="services-details">
                     <div class="img">
                         <img src="{{ url('public/uploads/blogs/'.$blogs->image) }}" alt="Image">
@@ -50,20 +50,26 @@
                     
                 </div>
             </div>
-            <div class="col-lg-4 col-md-5 col-sm-12">
+            <div class="col-lg-4 col-md-5 col-sm-12 text-end" dir="rtl">
                 <div class="side-bar">
                     <div class="side-bar-box recent-post">
-                        <h3 class="title">Recent Post</h3>
+                        <h3 class="title">المشاركة الأخيرة</h3>
                         @foreach ($recent_blogs as $recent)
                             <div class="single-recent-post">
                                 <div class="recent-post-img">
                                     <a href="javascript:void(0)"><img src="{{ url('public/uploads/blogs/',$recent->image) }}" alt="Image"></a>
                                 </div>
                                 <div class="recent-post-content">
-                                    <ul>
-                                        <li><a href="#">{{ optional($recent->user)->name }}</a></li>
-                                        <li><a href="#"><i class="fa fa-calendar"></i>{{ $recent->created_at->format('h:i A') }}</a></li>
-                                    </ul>
+                                    <div class="row mb-4 justify-content-between text-nowrap" style="direction: rtl;">
+                                        <div class="col-auto ms-2">
+                                            <i class="las la-calendar"></i>
+                                            {{ arabicDiffForHumans($recent->created_at) }}
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="las la-user-alt"></i>
+                                            {!!optional($recent->user)->name ?? 'زائر' !!}
+                                        </div>
+                                    </div>
                                     <h3><a href="blog-details.html">{{ $recent->arabic_title }}</a></h3>
                                 </div>
                             </div>

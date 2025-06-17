@@ -76,12 +76,11 @@
         <div class="atorn-nav">
             <div class="container">
                 <nav class="navbar navbar-expand-md navbar-light mx-auto px-5">
-                    <a class="navbar-brand" href="javascript:void(0)">
-                        {{-- <img src="{{ asset_url('frontend/img/logo.png') }}" class="logo1" alt="logo"> --}}
-                        <img src="{{ url('public/uploads/logo',$logo->image) }}" class="logo2" alt="logo">
-                    </a>
-
                     <div class="collapse navbar-collapse mean-menu">
+                        <a class="navbar-brand" href="javascript:void(0)">
+                            {{-- <img src="{{ asset_url('frontend/img/logo.png') }}" class="logo1" alt="logo"> --}}
+                            <img src="{{ url('public/uploads/logo',$logo->image) }}" class="logo2" alt="logo">
+                        </a>
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item">
                                 <a href="{{ route('front.arabicPage') }}" class="nav-link active">
@@ -89,7 +88,6 @@
                                 </a>
                                 
                             </li>
-
                             <li class="nav-item">
                                 <a href="javascript:void(0)" class="nav-link">
                                     معلومات عنا <i class="las la-angle-down"></i>
@@ -108,16 +106,13 @@
                                     </li>
                                 </ul>
                             </li>
-
-                            
-
                             <li class="nav-item">
                                 <a href="javascript:void(0)" class="nav-link">
                                     خدمات <i class="las la-angle-down"></i>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item">
-                                        <a href="{{ route('front.allservices') }}" class="nav-link">الجميع خدمات</a>
+                                        <a href="{{ route('front.arabic_service') }}" class="nav-link">الجميع خدمات</a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="javascript:void(0)" class="nav-link">قانون الشركات</a>
@@ -133,7 +128,6 @@
                                     </li>
                                 </ul>
                             </li>
-
                             <li class="nav-item">
                                 <a href="javascript:void(0)" class="nav-link">
                                     دراسة الحالة  <i class="las la-angle-down"></i>
@@ -148,14 +142,12 @@
                                     </li>
                                 </ul>
                             </li>
-
                             <li class="nav-item">
                                 <a href="javascript:void(0)" class="nav-link">
                                     فريقنا 
                                 </a>
                               
                             </li>
-
                             <li class="nav-item">
                                 <a href="javascript:void(0)" class="nav-link">
                                     مقالات <i class="las la-angle-down"></i>
@@ -169,13 +161,12 @@
                                     </li>
                                 </ul>
                             </li>
-
                             <li class="nav-item">
                                 <a href="javascript:void(0)" class="nav-link">اتصال</a>
                             </li>
-                           
                         </ul>
                     </div>
+                    
                 </nav>
             </div>
         </div>

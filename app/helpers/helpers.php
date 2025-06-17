@@ -152,3 +152,12 @@ if (!function_exists('get_new_order_notification_audio')) {
         return uploads($file_path);
     }
 }
+
+
+function arabicDiffForHumans($date) {
+    return str_replace(
+        ['second', 'minute', 'hour', 'day', 'week', 'month', 'year', 'ago', 'from now'],
+        ['ثانية', 'دقيقة', 'ساعة', 'يوم', 'أسبوع', 'شهر', 'سنة', 'منذ', 'من الآن'],
+        $date->diffForHumans()
+    );
+}

@@ -1125,7 +1125,7 @@ Hero Slider Area
   background-color: #c8242f;
   width: 85px;
   height: 2px;
-  left: 0;
+  /* left: 0; */
   right: 0;
   bottom: 0;
 }
@@ -2062,10 +2062,8 @@ Service Area
   width: 75px;
   height: 4px;
   bottom: -15px;
-  left: 0;
   border-radius: 3px;
 }
-
 .side-bar-box form {
   position: relative;
 }
