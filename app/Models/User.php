@@ -49,4 +49,8 @@ class User extends Authenticatable
         return $this->hasMany(Blogs::class,'created_by','id');
     }
 
+    public function message(){
+        return $this->hasMany(FounderMessage::class,'created_by','id');
+    }
+
 }

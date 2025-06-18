@@ -10,10 +10,12 @@ use App\Models\OurTeam;
 use App\Models\Slidder;
 use App\Models\Vission;
 use App\Models\ChooseUs;
+use App\Models\Question;
 use App\Models\Services;
 use App\Models\CaseStudy;
 use App\Models\ClientReview;
 use Illuminate\Http\Request;
+use App\Models\FounderMessage;
 use App\Http\Controllers\Controller;
 
 class IndexController extends Controller
@@ -120,4 +122,23 @@ class IndexController extends Controller
         $logo = Logo::first();
         return view('front-end.mission-vision',compact('mission','logo','vission'));
     }
+
+    public function FounderMessage()
+    {
+        $founder = FounderMessage::with('user')
+            ->whereHas('user')
+            ->latest()
+            ->first();
+            $logo = Logo::first();
+        return view('front-end.foundermessage',compact('founder','logo'));
+    }
+
+    public function Faq()
+    {
+        $faq =  Question::orderBy('created_at','desc')->take(7)->get();
+        // return $faq;
+        $logo = Logo::first();
+        return view('front-end.faq',compact('faq','logo'));
+    }
+    
 }

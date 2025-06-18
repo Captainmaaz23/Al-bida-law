@@ -12,6 +12,6 @@
 
 @section('content')
 
-@include('front-end.components.faq')
+@include('front-end.components.founder-message')
     
 @endsection

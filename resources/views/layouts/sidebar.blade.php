@@ -266,11 +266,18 @@ $AUTH_USER = Auth::user();
                 @canany(['roles-listing', 'general-settings-listing', 'addon-types-listing', 'all','slidder','web-logo','contact' ,'certificate','founder','case-study','mission'])
 
                 <li class="nav-main-item {{ request()->is('roles*') || request()->is('general-settings*') || request()->is('addon-types*') || request()->is('slidder')   || request()->is('case-study') ? 'open' : '' }}">
-                    <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="{{ request()->is('roles*') || request()->is('general-settings*') || request()->is('web-logo') || request()->is('mission') || request()->is('addon-types*') || request()->is('contact') || request()->is('company-detail') || request()->is('founder') || request()->is('vission') || request()->is('certificate') || request()->is('chooseus') || request()->is('client_review') ? 'true' : 'false' }}" href="#">
+                    <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="{{ request()->is('roles*') || request()->is('general-settings*') || request()->is('web-logo') || request()->is('mission') || request()->is('addon-types*') || request()->is('contact') || request()->is('company-detail') || request()->is('founder') || request()->is('vission') || request()->is('certificate') || request()->is('chooseus') || request()->is('working-hour') || request()->is('client_review') ? 'true' : 'false' }}" href="#">
                         <i class="nav-main-link-icon si si-social-dropbox"></i>
                         <span class="nav-main-link-name">Settings</span>
                     </a>
                     <ul class="nav-main-submenu">
+                        @can('working-hour')
+                        <li class="nav-main-item">
+                            <a class="nav-main-link {{ request()->is('working-hour') ? 'active' : '' }}" href="{{ url('/working-hour') }}">
+                                <span class="nav-main-link-name">Working Hour</span>
+                            </a>
+                        </li>
+                        @endcan  
                         @can('client_review')
                         <li class="nav-main-item">
                             <a class="nav-main-link {{ request()->is('client_review') ? 'active' : '' }}" href="{{ url('/client_review') }}">

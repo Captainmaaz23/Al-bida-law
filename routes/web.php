@@ -155,6 +155,12 @@ Route::get('/dashboard', [HomeController::class, 'index'])->middleware(['auth'])
     Route::get('/chooseus-record',[ChooseUsController::class, 'service_datatable'])->name('chooseus-record');
     Route::delete('/delete-field/{id}', [ChooseUsController::class, 'removefield'])->name('remove.field');
     // Why Choose Us
+
+    // Working Hour
+    // Route::resource('working-hour',[]);
+    // Working Hour
+
+
     Route::prefix('front-end')->name('front.')->group(function () {
         Route::get('/', [IndexController::class, 'index'])->name('home');
         Route::get('/blog-detail/{id}', [IndexController::class, 'blogdetail'])->name('about');
@@ -164,6 +170,8 @@ Route::get('/dashboard', [HomeController::class, 'index'])->middleware(['auth'])
         Route::post('/set-language', [IndexController::class, 'setLanguage'])->name('setLanguage');
         Route::get('/team',[IndexController::class,'Team'])->name('team');
         Route::get('/mission-vission',[IndexController::class,'MissionVission'])->name('mission-vission');
+        Route::get('/founder_message',[IndexController::class,'FounderMessage'])->name('founder-message');
+        Route::get('/faq',[IndexController::class,'Faq'])->name('faq');
         // Arabic Pages
 
         Route::get('/arabicPage',[IndexController::class,'arabicPage'])->name('arabicPage');

@@ -96,7 +96,7 @@
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item">
-                                        <a href="javascript:void(0)" class="nav-link active">Founder Message</a>
+                                        <a href="{{ route('front.founder-message') }}" class="nav-link active">Founder Message</a>
                                     </li>
 
                                     <li class="nav-item">
@@ -104,7 +104,7 @@
                                     </li>
 
                                     <li class="nav-item">
-                                        <a href="javascript:void(0)" class="nav-link">FAQ's</a>
+                                        <a href="{{ route('front.faq') }}" class="nav-link">FAQ's</a>
                                     </li>
                                 </ul>
                             </li>
