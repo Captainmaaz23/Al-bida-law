@@ -6,7 +6,11 @@
                     <div class="logo justify-content-start d-flex">
                         <img src="{{ asset_url('frontend/img/logo-white01.png') }}" alt="logo">
                     </div>
-                    <p class="text-end" dir="rtl">مكتب البدع للمحاماة هو مكتب قانوني قطري رائد يقدم حلولاً استثنائية
+                    <p class="text-end" dir="rtl" style="color: white !important; font-size: 18px;">مكتب البدع
+                        للمحاماة هو
+                        مكتب
+                        قانوني قطري رائد يقدم
+                        حلولاً استثنائية
                         بمزيج من الممارسات التقليدية والحديثة.</p>
 
 

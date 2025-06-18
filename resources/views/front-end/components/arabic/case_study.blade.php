@@ -11,16 +11,17 @@
                 <div class="right-way-text">
                     <div class="section-title">
                         <h2 class="text-end" dir="rtl">دراسات الحالة - منهجيتنا</h2>
-                        <p dir="rtl">{{$casestudy->arabic_decision}}</p>
+                        <p dir="rtl" style="color:white!important;"> {{ $casestudy->arabic_decision }}</p>
                     </div>
 
                     <div class="text-sign">
-                        <img src="{{ url('public/uploads/case-study/'.$casestudy->image) }}" alt="Sign">
-                        <h3 class="text-end" dir="rtl">{{$casestudy->arabic_client}}</h3>
-                        <p class="text-end" dir="rtl">{{$casestudy->arabic_attorny}}</p>
+                        <img src="{{ url('public/uploads/case-study/' . $casestudy->image) }}" alt="Sign">
+                        <h3 class="text-end" dir="rtl">{{ $casestudy->arabic_client }}</h3>
+                        <p style="color:beige!important;" class="text-end" dir="rtl">
+                            {{ $casestudy->arabic_attorny }}</p>
                     </div>
                 </div>
-            </div> 
+            </div>
 
             <div class="col-lg-7">
                 <div class="video-contant">
@@ -35,7 +36,7 @@
                     </div>
                 </div>
             </div>
-        </div>  
+        </div>
     </div>
 </div>
 <!-- End Right Way Area -->

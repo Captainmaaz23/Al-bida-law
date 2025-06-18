@@ -20,8 +20,8 @@
                     <!-- Text on the left -->
                     <div class="img-text-ar ">
                         <h3 class="text-end">{{ $client->heading_arabic }}</h3>
-                        <p class="text-end">{{ $client->summary_arabic }}</p>
-                        <a href="javascript:void(0)" class="d-block text-end">
+                        <p class="text-end" style="color:white !important">{{ $client->summary_arabic }}</p>
+                        <a href="javascript:void(0)" class="d-block text-end" style="font-size:16px;">
                             <i class="las la-angle-double-left"></i>
                             اقرأ المزيد
                         </a>

@@ -13,7 +13,8 @@
 
                         @foreach ($chooseUs as $choose)
                             <h2 dir="rtl" class="text-end">{{ $choose->arabic_heading }}</h2>
-                            <p dir="rtl" class="text-end">{{ $choose->arabic_summary }}
+                            <p dir="rtl" style="color:White!important" class="text-end">
+                                {{ $choose->arabic_summary }}
                             </p>
                         @endforeach
 
@@ -34,7 +35,8 @@
                                     <!-- Text box -->
                                     <div class="flex-grow-1">
                                         <h3 class="text-end">{{ $detail->arabicsub_heading ?? '' }}</h3>
-                                        <p class="text-end">{{ $detail->arabicsub_summary ?? '' }}</p>
+                                        <p class="text-end" style="color:white!important;">
+                                            {{ $detail->arabicsub_summary ?? '' }}</p>
                                     </div>
                                 </div>
                             </div>
@@ -78,7 +80,7 @@
                 <div class="signle-fun-fact">
                     <i class="las la-balance-scale"></i>
                     <h3><span class="odometer" data-count="15890">00</span>+</h3>
-                    <p style="font-weight: bold; font-size:20px">القضية المقدمة</p>
+                    <p style="font-weight: bold; color:white!important; font-size:20px">القضية المقدمة</p>
                 </div>
             </div>
 
@@ -86,7 +88,7 @@
                 <div class="signle-fun-fact">
                     <i class="las la-gavel"></i>
                     <h3><span class="odometer" data-count="525">00</span>+</h3>
-                    <p style="font-weight: bold; font-size:20px">المستشارين</p>
+                    <p style="font-weight: bold; color:white!important; font-size:20px">المستشارين</p>
                 </div>
             </div>
 
@@ -94,7 +96,7 @@
                 <div class="signle-fun-fact">
                     <i class="las la-trophy"></i>
                     <h3><span class="odometer" data-count="275">00</span>+</h3>
-                    <p style="font-weight: bold; font-size:20px">إجمالي العملاء</p>
+                    <p style="font-weight: bold; color:white!important; font-size:20px">إجمالي العملاء</p>
                 </div>
             </div>
 
@@ -102,7 +104,7 @@
                 <div class="signle-fun-fact">
                     <i class="lab la-gitkraken"></i>
                     <h3><span class="odometer" data-count="1248">00</span></h3>
-                    <p style="font-weight: bold; font-size:20px">المشاريع</p>
+                    <p style="font-weight: bold; color:white!important; font-size:20px">المشاريع</p>
                 </div>
             </div>
         </div>
