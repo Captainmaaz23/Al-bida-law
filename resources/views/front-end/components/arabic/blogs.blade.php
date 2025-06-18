@@ -77,11 +77,13 @@
                                 </div>
                             </div>
 
-                            <p class="text-start" dir="rtl" class="text-end">
+                            <p class="text-start" dir="rtl" class="text-end"
+                                style="color: white!important; font-size:14px">
                                 {!! Str::limit($blog->arabic_description, 60) !!}
                             </p>
 
-                            <a href="{{ route('front.single_arabic_blog', $blog->id) }}" class="read-more d-flex text-end" dir="rtl">
+                            <a href="{{ route('front.single_arabic_blog', $blog->id) }}"
+                                class="read-more d-flex text-end" dir="rtl">
                                 اقرأ المزيد
                                 <i class="las la-angle-double-left mt-1"></i>
                             </a>

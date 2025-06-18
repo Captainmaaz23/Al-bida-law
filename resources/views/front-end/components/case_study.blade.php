@@ -11,16 +11,16 @@
                 <div class="right-way-text">
                     <div class="section-title">
                         <h2>Our Case Studies - Methodology</h2>
-                        <p>{{$casestudy->decision}}</p>
+                        <p style="color:white!important;">{{ $casestudy->decision }}</p>
                     </div>
 
                     <div class="text-sign">
-                        <img src="{{ url('public/uploads/case-study/'.$casestudy->image) }}" alt="Sign">
-                        <h3>{{$casestudy->client}}</h3>
-                        <p>{{$casestudy->attorny}}</p>
+                        <img src="{{ url('public/uploads/case-study/' . $casestudy->image) }}" alt="Sign">
+                        <h3>{{ $casestudy->client }}</h3>
+                        <p style="color:white!important;">{{ $casestudy->attorny }}</p>
                     </div>
                 </div>
-            </div> 
+            </div>
 
             <div class="col-lg-7">
                 <div class="video-contant">
@@ -35,7 +35,7 @@
                     </div>
                 </div>
             </div>
-        </div>  
+        </div>
     </div>
 </div>
 <!-- End Right Way Area -->

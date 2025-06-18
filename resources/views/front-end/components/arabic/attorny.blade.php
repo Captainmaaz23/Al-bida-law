@@ -18,7 +18,8 @@
                         <div class="attorney-card-text">
                             <h3 class="text-center" data="rtl"><a
                                     href="javascript:void(0)">{{ Str::limit($attorny->arabic_client, 25) }}</a></h3>
-                            <p class="text-end" dir="rtl">{{ Str::limit($attorny->arabic_attorny, 30) }}</p>
+                            <p style="color: white!important" class="text-end" dir="rtl">
+                                {{ Str::limit($attorny->arabic_attorny, 50) }}</p>
                             <ul>
                                 <li>
                                     <a href="javascript:void(0)" target="_blank">

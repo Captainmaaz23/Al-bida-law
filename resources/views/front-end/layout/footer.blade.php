@@ -6,7 +6,9 @@
                     <div class="logo">
                         <img src="{{ asset_url('frontend/img/logo-white01.png') }}" alt="logo">
                     </div>
-                    <p>Al Bidda Law Firm is a leading Qatari legal firm offering exceptional solutions with a blend of traditional and modern practices.</p>
+                    <p style="color:white!important;">Al Bidda Law Firm is a leading Qatari legal firm offering
+                        exceptional
+                        solutions with a blend of traditional and modern practices.</p>
 
                     <ul class="footer-socials">
                         <li>
@@ -25,7 +27,7 @@
                             </a>
                         </li>
                         <li>
-                             <a href="javascript:void(0)" target="_blank">
+                            <a href="javascript:void(0)" target="_blank">
                                 <i class="lab la-google-plus"></i>
                             </a>
                         </li>
@@ -36,7 +38,7 @@
             <div class="col-lg-2 col-sm-6">
                 <div class="footer-widget">
                     <h3>Quick Links</h3>
-            
+
                     <ul class="footer-text">
                         <li>
                             <a href="javascript:void(0)">
@@ -83,7 +85,7 @@
                     </ul>
                 </div>
             </div>
-            
+
             <div class="col-lg-2 col-sm-6">
                 <div class="footer-widget pl-50">
                     <h3>Services</h3>
@@ -98,7 +100,7 @@
                         <li>
                             <a href="javascript:void(0)">
                                 <i class="las la-star"></i>
-                               Dispute Resolution
+                                Dispute Resolution
                             </a>
                         </li>
                         <li>
@@ -110,13 +112,13 @@
                         <li>
                             <a href="javascript:void(0)">
                                 <i class="las la-star"></i>
-                               Intellectual Property
+                                Intellectual Property
                             </a>
                         </li>
                         <li>
                             <a href="javascript:void(0)">
                                 <i class="las la-star"></i>
-                               Expert Advice
+                                Expert Advice
                             </a>
                         </li>
                         <li>
@@ -128,7 +130,7 @@
                         <li>
                             <a href="javascript:void(0)">
                                 <i class="las la-star"></i>
-                               Case success rate 99%
+                                Case success rate 99%
                             </a>
                         </li>
                     </ul>
@@ -146,11 +148,13 @@
                         </li>
                         <li>
                             <i class="las la-envelope"></i>
-                            <a href="javascript:void(0)"><span class="__cf_email__" data-cfemail="">info@albiddalawfirm.com</span></a>
+                            <a href="javascript:void(0)"><span class="__cf_email__"
+                                    data-cfemail="">info@albiddalawfirm.com</span></a>
                         </li>
                         <li>
                             <i class="las la-map-marker-alt"></i>
-                            Head Office: 10th Floor, Office No. 1002, P.O. Box: 200884, Hada Zalam Street, West Bay, Doha, Qatar.
+                            Head Office: 10th Floor, Office No. 1002, P.O. Box: 200884, Hada Zalam Street, West Bay,
+                            Doha, Qatar.
                         </li>
                     </ul>
                 </div>
@@ -172,5 +176,3 @@
 <div class="go-top">
     <i class="las la-hand-point-up"></i>
 </div>
-
-

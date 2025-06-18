@@ -8,14 +8,15 @@
                 <div class="d-table-cell">
                     <div class="container">
                         <div class="slider-content" style="padding-left: 30px">
-                            <span style="font-weight: bold; font-size:24px">
-                                <p dir="rtl" class="text-end"> مرحباً بكم في مكتب البدع للمحاماة </p>
+                            <span style="font-weight:bold; font-size:24px">
+                                <p dir="rtl" class="text-end" style="color:white!important; "> مرحباً بكم في مكتب
+                                    البدع للمحاماة </p>
                             </span>
-                            <h1 dir="rtl">{!! $slide->arabic_text !!}</h1>
-                            <p dir="rtl">{{ $slide->arabic_summary }}</p>
+                            <h1 dir="rtl" style="color:white!important; ">{!! $slide->arabic_text !!}</h1>
+                            <p dir="rtl" style="color:white!important; ">{{ $slide->arabic_summary }}</p>
                             <div class="text-sign">
-                                <h3 dir="rtl">{{ $slide->arabic_name }}</h3>
-                                <p dir="rtl">{{ $slide->arabic_attorny }}</p>
+                                <h3 dir="rtl" style="color:white!important; ">{{ $slide->arabic_name }}</h3>
+                                <p dir="rtl" style="color:white!important; ">{{ $slide->arabic_attorny }}</p>
                             </div>
                         </div>
                     </div>
