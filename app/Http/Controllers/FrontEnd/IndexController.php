@@ -140,5 +140,37 @@ class IndexController extends Controller
         $logo = Logo::first();
         return view('front-end.faq',compact('faq','logo'));
     }
+
+
+    public function ArabicFounderMessage()
+    {
+        $founder = FounderMessage::with('user')
+            ->whereHas('user')
+            ->latest()
+            ->first();
+            $logo = Logo::first();
+        return view('front-end.Arabic-Components.arabic_founder_message',compact('founder','logo'));
+    }
+
+    public function ArabicMissionVission(){
+        $mission = Mission::latest()->first();
+        $vission = Vission::latest()->first();
+        $logo = Logo::first();
+        return view('front-end.Arabic-Components.mission-vission',compact('mission','logo','vission'));
+    }
+
+    public function ArabicFaq()
+    {
+        $faq =  Question::orderBy('created_at','desc')->take(7)->get();
+        // return $faq;
+        $logo = Logo::first();
+        return view('front-end.Arabic-Components.arabic-faq',compact('faq','logo'));
+    }
+
+    public function ArabicTeam(){
+        $teams = OurTeam::orderBy('created_by','desc')->paginate(6);
+        $logo = Logo::first();
+        return view('front-end.Arabic-Components.arabic-team',compact('teams','logo'));
+    }
     
 }

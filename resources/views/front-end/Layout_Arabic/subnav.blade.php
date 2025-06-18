@@ -95,15 +95,15 @@
                                 </a>
                                 <ul class="dropdown-menu text-end">
                                     <li class="nav-item">
-                                        <a href="javascript:void(0)" class="nav-link active ">مؤسس رسالة</a>
+                                        <a href="{{ route('front.arabic-founder-message') }}" class="nav-link active ">مؤسس رسالة</a>
                                     </li>
 
                                     <li class="nav-item">
-                                        <a href="javascript:void(0)" class="nav-link">المهمة / الرؤية</a>
+                                        <a href="{{ route('front.arabic-mission-vission') }}" class="nav-link">المهمة / الرؤية</a>
                                     </li>
 
                                     <li class="nav-item">
-                                        <a href="javascript:void(0)" class="nav-link">الأسئلة الشائعة</a>
+                                        <a href="{{ route('front.arabic-faq') }}" class="nav-link">الأسئلة الشائعة</a>
                                     </li>
                                 </ul>
                             </li>
@@ -144,7 +144,7 @@
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a href="javascript:void(0)" class="nav-link">
+                                <a href="{{ route('front.arabic-team') }}" class="nav-link">
                                     فريقنا
                                 </a>
 

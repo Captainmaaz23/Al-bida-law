@@ -179,7 +179,10 @@ Route::get('/dashboard', [HomeController::class, 'index'])->middleware(['auth'])
         Route::get('/all-arabicblogs', [IndexController::class,'AllArabicBlogs'])->name('allarabicblogs');
         Route::get('/arabic-services',[IndexController::class,'arabicservice'])->name('arabic_service');
         Route::get('/single-arabic-services/{id}',[IndexController::class,'singlearabicservice'])->name('single_arabic_service');
-
+        Route::get('/arabic_founder_message',[IndexController::class,'ArabicFounderMessage'])->name('arabic-founder-message');
+        Route::get('/arabic-mission-vission',[IndexController::class,'ArabicMissionVission'])->name('arabic-mission-vission');
+        Route::get('/arabic-faq',[IndexController::class,'ArabicFaq'])->name('arabic-faq');
+        Route::get('/arabic-team',[IndexController::class,'ArabicTeam'])->name('arabic-team');
     });
     
     // Laanguage Routes

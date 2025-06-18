@@ -30,11 +30,11 @@
                                             <li class="accordion-item">
                                                 <a class="accordion-title {{ $index == 0 ? 'active' : '' }}" href="javascript:void(0)">
                                                     <i class="las la-plus"></i>
-                                                    {{ strip_tags($faqs->english_question) }}
+                                                    {{ strip_tags($faqs->arabic_question) }}
                                                 </a>
                                 
                                                 <div class="accordion-content {{ $index == 0 ? 'show' : '' }}">
-                                                    {!! $faqs->english_description !!}
+                                                    {!! $faqs->arabic_description !!}
                                                 </div>
                                             </li>
                                         @endforeach
