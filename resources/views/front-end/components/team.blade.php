@@ -37,12 +37,12 @@
                     @foreach ($teams as $team)
                     <div class="col-lg-4 col-sm-6">
                         <div class="attorney-card">
-                            <a href="attorney-details.html">
+                            <a href="{{ route('front.english-attorny-detail',$team->id) }}">
                                 <img src="{{ url('public/uploads/our-teams/',$team->image) }}" alt="Image" style="width:100%;height:70vh" class="img-fluid">
                             </a>
                             <div class="attorney-card-text">
                                 <h3><a href="attorney-details.html">{{$team->name}}</a></h3>
-                                <p>{{ $team->position }}</p>
+                                <p>{{ Str::limit($team->position,20) }}</p>
                                 <ul>
                                     <li>
                                         <a href="https://www.facebook.com/login/" target="_blank">

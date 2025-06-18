@@ -40,6 +40,7 @@ use App\Http\Controllers\MissionController;
 use App\Http\Controllers\VissionController;  
 use App\Http\Controllers\ChooseUsController;  
 use App\Http\Controllers\ClientReviewController;  
+use App\Http\Controllers\WorkingHourController;  
 
 Route::get('/cache-clear', function () {
     Artisan::call('cache:clear');
@@ -157,7 +158,7 @@ Route::get('/dashboard', [HomeController::class, 'index'])->middleware(['auth'])
     // Why Choose Us
 
     // Working Hour
-    // Route::resource('working-hour',[]);
+    Route::resource('working-hour',WorkingHourController::class);
     // Working Hour
 
 
@@ -172,6 +173,7 @@ Route::get('/dashboard', [HomeController::class, 'index'])->middleware(['auth'])
         Route::get('/mission-vission',[IndexController::class,'MissionVission'])->name('mission-vission');
         Route::get('/founder_message',[IndexController::class,'FounderMessage'])->name('founder-message');
         Route::get('/faq',[IndexController::class,'Faq'])->name('faq');
+        Route::get('/english-attorny-detail/{id}',[IndexController::class,'AttornyDetail'])->name('english-attorny-detail');
         // Arabic Pages
 
         Route::get('/arabicPage',[IndexController::class,'arabicPage'])->name('arabicPage');
@@ -183,6 +185,7 @@ Route::get('/dashboard', [HomeController::class, 'index'])->middleware(['auth'])
         Route::get('/arabic-mission-vission',[IndexController::class,'ArabicMissionVission'])->name('arabic-mission-vission');
         Route::get('/arabic-faq',[IndexController::class,'ArabicFaq'])->name('arabic-faq');
         Route::get('/arabic-team',[IndexController::class,'ArabicTeam'])->name('arabic-team');
+        Route::get('/attorny-detail/{id}',[IndexController::class,'ArabicAttornyDetail'])->name('attorny-detail');
     });
     
     // Laanguage Routes

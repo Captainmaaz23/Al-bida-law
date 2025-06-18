@@ -12,6 +12,6 @@
 
 @section('content')
 
-@include('front-end.components.arabic.all-blogs')
+@include('front-end.components.arabic.founder-message')
     
 @endsection

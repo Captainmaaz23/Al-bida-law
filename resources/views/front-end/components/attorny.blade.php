@@ -11,7 +11,7 @@
             @foreach ($experienced_attorny as $attorny)
                 <div class="col-lg-4 col-sm-6">
                     <div class="attorney-card attcardhome">
-                        <a href="javascript:void(0)">
+                        <a href="#">
                             <img src="{{ url('public/uploads/case-study/' . $attorny->image) }}" alt="Not Found"
                                 style="height: 80vh; object-fit: cover; width: 100%; object-position: center center; " />
                         </a>

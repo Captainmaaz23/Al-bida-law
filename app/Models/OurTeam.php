@@ -21,4 +21,9 @@ class OurTeam extends Model
     {
         return Auth::check() && Auth::user()->can($permission);
     }
+
+    public function user(){
+        return $this->belongsTo(User::class,'created_by');
+    }
+
 }

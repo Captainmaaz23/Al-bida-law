@@ -53,4 +53,8 @@ class User extends Authenticatable
         return $this->hasMany(FounderMessage::class,'created_by','id');
     }
 
+    public function ourTeam(){
+        return $this->hasMany(OurTeam::class,'created_by','id');
+    }
+
 }

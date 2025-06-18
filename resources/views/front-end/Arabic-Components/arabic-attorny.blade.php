@@ -6,12 +6,12 @@
     </div>
 </div>
 
-@extends('front-end.layout.app')
+@extends('front-end.layout.arabic_app')
 
-@section('title','Attorny Detail')
+@section('title','Blog Detail')
 
 @section('content')
 
-@include('front-end.components.attorny-detail')
+@include('front-end.components.arabic.attorny-detail')
     
 @endsection

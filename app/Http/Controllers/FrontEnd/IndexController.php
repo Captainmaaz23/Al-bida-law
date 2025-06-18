@@ -65,6 +65,12 @@ class IndexController extends Controller
         return view('front-end.service-details',compact('logo','single_service','recent_services','services_name','blog_tag'));
     }
 
+    public function AttornyDetail($id){
+        $team = OurTeam::with('user')->find($id);
+        $logo = Logo::first();
+        return view('front-end.attorney-details',compact('team','logo'));
+    }
+
     public function arabicPage(){
         $blogs = Blogs::orderBy('created_at', 'desc')->take(3)->get();
         $about = About::latest()->first();
@@ -173,4 +179,10 @@ class IndexController extends Controller
         return view('front-end.Arabic-Components.arabic-team',compact('teams','logo'));
     }
     
+    public function ArabicAttornyDetail($id){
+        $team = OurTeam::with('user')->find($id);
+        $logo = Logo::first();
+        return view('front-end.Arabic-Components.arabic-attorny',compact('team','logo'));
+    }
+
 }
