@@ -75,7 +75,7 @@ $menus = $menus ?? [];
         <label for="english-description" class="d-flex text-end" dir="rtl">الوصف باللغة الإنجليزية:</label>
         <textarea 
             id="arabic-description"
-            name="description" 
+            name="arabic_description" 
             class="form-control" 
             placeholder="الوصف باللغة الإنجليزية:"
             

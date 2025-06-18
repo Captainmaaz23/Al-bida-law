@@ -162,6 +162,8 @@ Route::get('/dashboard', [HomeController::class, 'index'])->middleware(['auth'])
         Route::get('/all-services',[IndexController::class,'AllServices'])->name('allservices');
         Route::get('/single-services/{id}',[IndexController::class,'SingleService'])->name('singleservices');
         Route::post('/set-language', [IndexController::class, 'setLanguage'])->name('setLanguage');
+        Route::get('/team',[IndexController::class,'Team'])->name('team');
+        Route::get('/mission-vission',[IndexController::class,'MissionVission'])->name('mission-vission');
         // Arabic Pages
 
         Route::get('/arabicPage',[IndexController::class,'arabicPage'])->name('arabicPage');

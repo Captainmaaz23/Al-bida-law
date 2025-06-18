@@ -38,7 +38,7 @@
                              </li>
                          </ul>
                          <div style="text-align: justify; line-height: 2;">
-                             {!! $blogs->arabic_description !!}
+                             {!! $blogs->arabic_description ?? 'umer' !!}
                          </div>
 
 
@@ -61,7 +61,7 @@
                                      <div class="recent-post-img" style="flex-shrink: 0;">
                                          <a href="{{ route('front.single_arabic_blog', $recent->id) }}">
                                              <img src="{{ url('public/uploads/blogs/' . $recent->image) }}"
-                                                 alt="Image" class="w-100"
+                                                 alt="Image" class="w-100 mt-4"
                                                  style="max-width: 150px; border-radius: 5px;">
                                          </a>
                                      </div>

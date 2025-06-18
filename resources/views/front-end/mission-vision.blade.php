@@ -8,10 +8,10 @@
 
 @extends('front-end.layout.app')
 
-@section('title','Team Detail')
+@section('title','Mission-Vission')
 
 @section('content')
 
-@include('front-end.components.team')
+@include('front-end.components.mission-vission')
     
 @endsection

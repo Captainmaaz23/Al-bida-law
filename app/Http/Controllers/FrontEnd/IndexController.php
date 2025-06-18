@@ -5,7 +5,10 @@ namespace App\Http\Controllers\FrontEnd;
 use App\Models\Logo;
 use App\Models\About;
 use App\Models\Blogs;
+use App\Models\Mission;
+use App\Models\OurTeam;
 use App\Models\Slidder;
+use App\Models\Vission;
 use App\Models\ChooseUs;
 use App\Models\Services;
 use App\Models\CaseStudy;
@@ -103,5 +106,18 @@ class IndexController extends Controller
         $blog_tag = Blogs::select('arabic_tag')->get();
         // return $blog_tag;
         return view('front-end.Arabic-Components.single_arabicservice',compact('logo','single_service','recent_services','services_name','blog_tag'));
+    }
+
+    public function Team(){
+        $teams = OurTeam::orderBy('created_by','desc')->paginate(6);
+        $logo = Logo::first();
+        return view('front-end.team',compact('teams','logo'));
+    }
+
+    public function MissionVission(){
+        $mission = Mission::latest()->first();
+        $vission = Vission::latest()->first();
+        $logo = Logo::first();
+        return view('front-end.mission-vision',compact('mission','logo','vission'));
     }
 }

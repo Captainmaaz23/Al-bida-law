@@ -93,9 +93,9 @@
                                 <a href="javascript:void(0)" class="nav-link">
                                     معلومات عنا <i class="las la-angle-down"></i>
                                 </a>
-                                <ul class="dropdown-menu">
+                                <ul class="dropdown-menu text-end">
                                     <li class="nav-item">
-                                        <a href="javascript:void(0)" class="nav-link active">مؤسس رسالة</a>
+                                        <a href="javascript:void(0)" class="nav-link active ">مؤسس رسالة</a>
                                     </li>
 
                                     <li class="nav-item">
@@ -111,7 +111,7 @@
                                 <a href="javascript:void(0)" class="nav-link">
                                     خدمات <i class="las la-angle-down"></i>
                                 </a>
-                                <ul class="dropdown-menu">
+                                <ul class="dropdown-menu text-end">
                                     <li class="nav-item">
                                         <a href="{{ route('front.arabic_service') }}" class="nav-link">الجميع خدمات</a>
                                     </li>
@@ -133,7 +133,7 @@
                                 <a href="javascript:void(0)" class="nav-link">
                                     دراسة الحالة <i class="las la-angle-down"></i>
                                 </a>
-                                <ul class="dropdown-menu">
+                                <ul class="dropdown-menu text-end">
                                     <li class="nav-item">
                                         <a href="javascript:void(0)" class="nav-link">دراسة الحالة</a>
                                     </li>
@@ -153,7 +153,7 @@
                                 <a href="javascript:void(0)" class="nav-link">
                                     مقالات <i class="las la-angle-down"></i>
                                 </a>
-                                <ul class="dropdown-menu">
+                                <ul class="dropdown-menu text-end">
                                     <li class="nav-item">
                                         <a href="{{ route('front.allarabicblogs') }}" class="nav-link">مقالات</a>
                                     </li>

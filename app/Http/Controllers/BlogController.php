@@ -260,14 +260,15 @@ class BlogController extends Controller
      */
     public function update(Request $request, string $id)
     {
+        // return $request;
         $blog = Blogs::findOrFail($id);
     
         $blog->name = $request->name;
         $blog->description = $request->description;
         $blog->arabic_title = $request->arabic_title;
         $blog->arabic_description = $request->arabic_description;
-        $blogs->tag = $request->tag;
-        $blogs->arabic_tag = $request->arabic_tag;
+        $blog->tag = $request->tag;
+        $blog->arabic_tag = $request->arabic_tag;
 
         if ($request->hasFile('image')) {
             $oldImagePath = public_path('uploads/blogs/' . $blog->image);

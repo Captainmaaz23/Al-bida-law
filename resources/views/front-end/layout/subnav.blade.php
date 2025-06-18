@@ -100,7 +100,7 @@
                                     </li>
 
                                     <li class="nav-item">
-                                        <a href="javascript:void(0)" class="nav-link">Mission / Vision</a>
+                                        <a href="{{ route('front.mission-vission') }}" class="nav-link">Mission / Vision</a>
                                     </li>
 
                                     <li class="nav-item">
@@ -150,7 +150,7 @@
                             </li>
 
                             <li class="nav-item">
-                                <a href="javascript:void(0)" class="nav-link">
+                                <a href="{{ route('front.team') }}" class="nav-link">
                                     Our Team 
                                 </a>
                               
