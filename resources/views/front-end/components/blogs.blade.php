@@ -40,17 +40,12 @@
 
 
 
-                            <p style="color:white!important;">
+                            <span style="color:white!important">
                                 {!! Str::words($blog->description, 20, '...') !!}
-                            </p>
-
-                            <a href="{{ route('front.about', $blog->id) }}" class="read-more">
-                                Read More
-                                <i class="las la-angle-double-right"></i>
-                            </a>
-
+                            </span>
+                            <a href="{{ route('front.about', $blog->id) }}" class="read-more">Read More <i
+                                    class="las la-angle-double-right"></i></a>
                         </div>
-
                     </div>
                 </div>
             @endforeach
